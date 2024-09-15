@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.wr {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    min-height: 100vh;
+    
+} 
+aside {
+    background-color: rgb(237, 237, 237);
+}
+
+aside h2 {
+    color: #7656ff;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+aside>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.select>label {
+    font-weight: 700;
+}
+.select>select {
+    padding: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.select>select:focus {
+    outline: none;
+}
+.select>select:active {
+    outline: none;
+}
+
+.select>select>option {
+    background-color: #9c85ff;
+    color: white;
+}
+
+
+.checkbox {
+    position: relative;
+}
+
+
+
+.checkbox input {
+    opacity: 0;
+    position: absolute;
+
+}
+
+
+
+
+.checkbox>label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.checkbox>label::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: rgb(237, 237, 237);
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.checkbox input:checked + label::after {
+    background-color: #7656ff;
+}
+
+.textInput>input {
+ background-color: rgba(255, 255, 255, 0);
+ border: none;
+ border-bottom: 1px solid black;
+ padding: 5px;
+}
+
+.textInput>input:focus {
+    outline: none;
+    border-bottom: 1px solid #7656ff;
+}
+
+button {
+    border: 1px solid #7656ff;
+    padding: 5px;
+    border-radius: 10px;
+    color: #7656ff;
+    font-weight: 700;   
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    
+}
+
+button:hover {
+    background-color: #7556ff35;
+}
+button:active {
+    background-color: #97ff5635;
+}
+
+main {
+    background-color: aquamarine;
+}

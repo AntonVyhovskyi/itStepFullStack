@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/page2.css">
+</head>
+
+<body>
+    <div class="wr">
+        <aside>
+            <form>
+                <h2>Фільтр</h2>
+                <div class="select">
+                    <label for="typeProduct">Тип продукту</label>
+                    <select name="typeProduct" id="typeProduct">
+                        <option value="all">Всі</option>
+                        <option value="telefon">Телефон</option>
+                        <option value="laptop">Ноутбук</option>
+                        <option value="vacuum">Пилесос</option>
+                        <option value="charge">Зарядка</option>
+                    </select>
+                </div>
+
+                <div>
+                    <h3>Потужність</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" id="15w">
+                        <label for="15w">15w</label>
+                        
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="25w">
+                        <label for="25w">25w</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="65w">
+                        <label for="65w">65w</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="100w">
+                        <label for="100w">100w</label>
+                        <div class="checkbox">
+                    </div>
+                        <input type="checkbox" id="200w">
+                        <label for="200w">200w</label>
+                    </div>
+                </div>
+                <div>
+                    <h3>Марка</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" id="Samsung">
+                        <label for="Samsung">Samsung</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="Lg">
+                        <label for="Lg">Lg</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="Asus">
+                        <label for="Asus">Asus</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="Lenovo">
+                        <label for="Lenovo">Lenovo</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <label for="typeProduct">Сортування</label>
+                    <select name="typeProduct" id="typeProduct">
+                        <option value="fromCheap">Від дешевих</option>
+                        <option value="fromExp">Від дорогих</option>
+                        <option value="byRating">По рейтингу</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Назва моделі</h3>
+                    <div class="textInput">
+                        <input type="text" id="model">
+                    </div>
+                </div>
+                <button type="submit">
+                    Застосувати
+                </button>
+            </form>
+        </aside>
+        <main>
+            <iframe src="./index.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+        </main>
+    </div>
+
+</body>
+
+</html>

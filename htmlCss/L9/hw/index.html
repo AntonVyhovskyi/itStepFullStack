@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="formContainer">
+        <form>
+            <div>
+                <label for="name">Name</label>
+                <input required type="text" id="name">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input required type="password" id="pass">
+            </div>
+            <div>
+                <label for="pass">Password noch mal</label>
+                <input required type="password" id="pass">
+            </div>
+            <div>
+                <label for="data">Geburtstag</label>
+                <input required type="date" id="data">
+            </div>
+            <div class="radio">
+                <label for="data">Sex</label>
+                <div>
+                    <input type="radio" name="sex" id="man">
+                    <label for="man">Man</label>
+                    <input type="radio" name="sex" id="woman">
+                    <label for="woman">Woman</label>
+                </div>
+            </div>
+            <div>
+                <label for="age">Wie alt bist du?</label>
+                <input required type="number" id="age" max="150">
+            </div>
+            <div>
+                <label for="discription">Beschreibe dich</label>
+                <textarea cols="40" rows="10" name="discription" id="discription" placeholder="Ich bin fleissig"></textarea>
+            </div>
+            <div>
+                <button type="submit">
+                    Bereit
+                </button>
+            </div>
+            <a href="page2.html">Next page</a>
+            <a href="superLayout.html">Adaptive layout</a>
+        </form>
+        
+    </div>
+</body>
+
+</html>
