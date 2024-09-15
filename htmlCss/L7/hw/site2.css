@@ -1,0 +1,193 @@
+.wrapper {
+    border: 2px solid red;
+    background-color: rgb(216, 216, 216);
+    border-bottom: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(234, 132, 252);
+    margin-bottom: 20px;
+
+
+}
+
+header>div {
+    padding: 60px 100px;
+    background-color: aliceblue;
+
+}
+
+header>div>div {
+    width: 300px;
+    height: 60px;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+nav>div {
+    height: 100px;
+    flex-grow: 1;
+}
+
+nav>div:first-child {
+    background-color: red;
+}
+
+nav>div:nth-child(2) {
+    background-color: orange;
+}
+
+nav>div:nth-child(3) {
+    background-color: aqua;
+}
+
+nav>div:last-child {
+    background-color: yellow;
+}
+
+main {
+    display: flex;
+    height: 500px;
+    align-items: stretch;
+
+
+
+}
+
+main>section {
+    flex-grow: 1;
+    flex-basis: 0;
+
+
+}
+
+.leftBlock {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.centrBlock {
+    background-color: aqua;
+    display: flex;
+    align-items: flex-end;
+}
+
+.rightBlock {
+    background-color: blue;
+}
+
+
+.left {
+    width: 70%;
+    height: 70%;
+    background-color: aqua;
+    display: flex;
+    align-items: flex-end;
+}
+
+.left div {
+    height: 70%;
+    flex-grow: 1;
+}
+
+
+
+.a-left {
+    background-color: rosybrown;
+
+}
+
+.b-left {
+    background-color: yellow;
+}
+
+.centrBlock>div {
+    height: 70%;
+    flex-grow: 1;
+}
+
+.centrBlock>div:first-child {
+    background-color: red;
+}
+
+.centrBlock>div:last-child {
+    background-color: orange;
+}
+
+.a-centr {
+    background-color: yellow;
+    display: flex;
+    align-items: flex-end;
+}
+
+.a-centr>div {
+    flex-grow: 1;
+ 
+}
+
+.A-c {
+    background-color: orange;
+    height: 70%;
+}
+
+.B-c {
+    background-color: red;
+    height: 30%;
+}
+
+.rightBlock {
+    display: flex;
+}
+
+.rightBlock>div {
+    flex-grow: 1;
+    height: 35%;
+    flex-basis: 0;
+}
+
+.rightBlock>div:first-child {
+    background-color: aqua;
+    align-self: flex-end;
+}
+
+.rightBlock>div:nth-child(2) {
+    background-color: yellow;
+    align-self: flex-end;
+    margin-bottom: 60px;
+}
+
+.rightBlock>div:last-child {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    
+    align-self: center;
+    justify-content: space-evenly;
+    
+}
+
+.rightBlock>div:last-child>div {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+}
+
+
+.rightBlock>div:last-child>div:first-child {
+    align-self: flex-end;
+}
+
+.rightBlock>div:last-child>div:last-child {
+    align-self: flex-start;
+}

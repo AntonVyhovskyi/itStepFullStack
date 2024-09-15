@@ -1,0 +1,97 @@
+.float {
+    padding: 30px 0;
+    width: fit-content;
+    background-color: orange;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.float div {
+    height: 100px;
+    width: 100px;
+
+    float: left;
+}
+
+.k1 {
+    background-color: red;
+}
+
+.k2 {
+    background-color: green;
+}
+
+.k3 {
+    background-color: blue;
+}
+
+.k4 {
+    background-color: black;
+}
+
+
+.flex {
+    height: 100px;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 400px;
+    align-items: stretch;
+    background-color: orange;
+    margin-bottom: 100px;
+}
+
+.flex div {
+    flex-grow: 1;
+}
+
+.link {
+    background-color: antiquewhite;
+    height: 300px;
+
+    position: relative;
+}
+
+.link a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.link:hover a {
+    animation: anim 3s linear infinite alternate;
+}
+
+@keyframes anim {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+    20% {
+        top: 20%;
+        left: 30%;
+    }
+    40% {
+        top: 80%;
+        left: 50%;
+    }
+    60% {
+        top: 50%;
+        left: 80%;
+    }
+    80% {
+        top: 10%;
+        left: 50%;
+    }
+    100% {
+        top: 50%;
+        left: 20%;
+    }
+}
