@@ -1,0 +1,49 @@
+.div {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px;
+    background-color: orange;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+.div>div:first-child {
+    background-color: red;
+
+}
+.div>div:nth-child(2) {
+    background-color: green;
+}
+
+.div>div:nth-child(3) {
+    background-color: blue;
+} 
+
+.div>div:last-child {
+    background-color: black;
+}
+
+a {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(43, 113, 193);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    width: fit-content;
+}
+
+a:hover {
+    background-color: rgb(108, 170, 236);
+    transform: scale(1.1);
+}
+
+a:active {
+    background-color: rgb(32, 208, 94);
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
