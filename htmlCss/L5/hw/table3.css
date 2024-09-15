@@ -1,0 +1,85 @@
+* {
+
+    margin: 0;
+}
+
+.header {
+    background-color: #f7f5ff;
+    width: 100%;
+
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    color: rgb(76, 73, 73);
+    display: inline;
+}
+
+
+
+.header * {
+    display: inline;
+    margin-right: 10px;
+}
+
+.header h2 {
+    color: #6d4aff;
+    margin-right: 50px;
+}
+
+.header a {
+    color: rgb(76, 73, 73);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header a:hover {
+    color: #6d4aff;
+    ;
+}
+
+body {
+    background-color: #e8e5f3;
+}
+
+
+table {
+    margin: 0 auto;
+    border: 3px solid rgb(0, 255, 106);
+    border-radius: 10px;
+    
+}
+ 
+
+tr td {
+    padding: 30px;
+    background-color: azure;
+}
+
+tr td:active {
+    background-color: #6d4aff;
+    border-radius: 10px;
+
+}
+
+th {
+    background-color: bisque;
+}
+
+#malo {
+    background-color: rgb(246, 93, 93);
+}
+
+td+td {
+    background-color: rgb(203, 246, 223);
+}
+
+td:first-child {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.bigPrice {
+    background-color: rgb(246, 93, 93);
+}

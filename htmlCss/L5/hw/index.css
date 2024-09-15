@@ -1,0 +1,125 @@
+* {
+
+    margin: 0;
+}
+
+.header {
+    background-color: #f7f5ff;
+    width: 100%;
+   
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    color: rgb(76, 73, 73);
+    display: inline;
+}
+
+
+
+.header * {
+    display: inline;
+    margin-right: 10px;
+}
+
+.header h2 {
+    color: #6d4aff;
+    margin-right: 50px;
+}
+
+.header a {
+    color: rgb(76, 73, 73);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header a:hover {
+    color: #6d4aff;
+    ;
+}
+
+body {
+    background-color: #e8e5f3;
+}
+
+
+.artistList {
+    list-style: none;
+    padding-right: 30px;
+}
+
+.artistList>li {
+    border: solid 2px #6d4aff;
+    background-color: #f7f5ff;
+    margin-bottom: 50px;
+    padding: 10px;
+    position: relative;
+
+}
+
+.artistList>li>span {
+    position: absolute;
+    top: -30px;
+    border: solid 2px #6d4aff;
+    background-color: #f7f5ff;
+    padding: 7px;
+    
+   
+}
+
+section {
+    border: solid 2px #6d4aff;
+    background-color: #f7f5ff;
+    position: relative;
+}
+
+
+section>div {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 100px;
+}
+
+.a {
+    background-color: red;
+}
+
+.b {
+    background-color: blue;
+    position: fixed;
+    right: 10px;
+    top: 200px;
+    z-index: 999;
+    line-height: 50px;
+}
+
+.c {
+    background-color: yellow;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.d {
+    background-color: rosybrown;
+    position: relative;
+    left: 30px;
+}
+
+.e {
+    background-color: coral;
+    position: sticky;
+    top: 10px;
+}
+
+.f {
+    background-color: darkslategrey;
+}
+
+.heightPlus {
+    height: 2000px;
+    background-color: rgba(255, 255, 255, 0);
+}
