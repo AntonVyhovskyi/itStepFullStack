@@ -1,0 +1,53 @@
+.k1 {
+    background-color: blue;
+}
+
+.k2 {
+    background-color: red;
+}
+
+.k3 {
+    background-color: brown;
+}
+
+main>div>div>div,
+main>div>div>span {
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+
+main>div     {
+    padding: 50px;
+    margin: 0 auto;
+    width: 200px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+main>div>div {
+    margin-top: 30px;
+}
+
+.inline>div {
+    display: inline;
+}
+
+.inlineBlock>div {
+    display: inline-block;
+}
+
+.block>span {
+    display: block;
+}
+
+
+.hidden>div:hover>div {
+    visibility: hidden;
+}
+
+.hidden>div>div {
+    width: 50px;
+    height: 50px;
+}

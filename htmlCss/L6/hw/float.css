@@ -1,0 +1,54 @@
+.k1 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+.k2 {
+    width: 70px;
+    height: 70px;
+    background-color: blueviolet;
+    color: white;
+}
+
+
+main>div{
+    padding: 30px;
+    width: 400px;
+    border: 1px solid black;
+    
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+main>div>div {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid green;
+    margin: 0 auto;
+}
+
+main>div>h2,
+main>div>h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left>div {
+    float: left;
+}
+
+
+.right>div {
+    float: right;
+}
+
+.float2>div:first-child{
+    float: left;
+}
+
+.float>div {
+    float: left;
+}
