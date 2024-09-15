@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hausafgabe Lektion 7,8 seite 2</title>
+    <link rel="stylesheet" href="./homework.css">
+</head>
+<body>
+    <p>
+        Перший список який ми бачимо в першу чергу я стилізував за рахунок селектору 'ul>li' який 
+        стилізує всі li на першому рівні вкладеності.<br><br>  Тобто якщо в якійсь лі буде ще якийсь список то лі в ньому не стилізуються, 
+        але бекграундом покриються так як вони будуть внутрі лі в якого є бекграунд.<br><br>  Для цього і є два способи добавляння списку в список, внутрі лі і поза, для цього я створив два варіанти
+        <br><br> Я добавив бежевий бекграунд, дисплей блок, падінг, маржін, бордер радіус і зробив ширину по контенту 
+    </p>
+    <ul>
+        <li>Цьому я змінив бекграунд за рахунок фйорст чайлд</li>
+        <li class="lol">А цьому просто по класу</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Цьому я змінив бекграунд за рахунок нтейч чайлд (4)</li>
+        <li>Варіант 1
+            <ol type="a">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+            </ol>
+        </li>
+        <li>Варіант 2</li>
+        <ol type="a">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+        </ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Цьому я змінив бекграунд за рахунок ласт чайлд</li>
+    </ul>
+    <p>
+        Наступний мій список нумерований. Стилізований за рахунок '.nummerList li'. Він уже стилізує всі лі внутрі списка с класом nummerList.
+        <br><br>  Я також створив 2 варіанти вкладеності списка в список щоб було видно різницю
+        <br><br> Дав такі ж самі стилі що і попередньому списку
+    </p>
+    <ol class="nummerList">
+        <li class="plus">Lorem ipsum dolor sit amet.</li>
+        <li>>Цьому я змінив бекграунд за разунок селектору +</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Варіант 1
+        </li>
+        <ol type="a">
+            <li>Lorem, ipsum dolor.</li>
+            <li id="zaId">Я стилізований за допомогою id</li>
+            <li>Lorem, ipsum dolor.</li>
+        </ol>
+        <li title="This is a list item">Я стилізований за допомогою селектора який визначаеться по аргументу і його значенням</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Варіант 2
+            <ol type="a">
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+            </ol>
+        </li>
+        <li class="dalshe">Lorem ipsum dolor sit amet.</li>
+        <li>Ми стилізовані за допомогою селектора ~</li>
+        <li>Ми стилізовані за допомогою селектора ~</li>
+    </ol>
+</body>
+</html>

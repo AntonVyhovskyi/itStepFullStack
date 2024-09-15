@@ -1,0 +1,71 @@
+ul>li {
+    background-color: beige;
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
+}
+p {
+    width: 500px;
+    border: 2px solid red;
+    background-color: bisque;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+}
+ul>li:first-child {
+    background-color: aqua;
+}
+
+ul>li:last-child {
+    background-color: azure;
+}
+
+ul>li:nth-child(4) {
+    background-color: blueviolet;
+}
+
+.nummerList li {
+    background-color: beige;
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
+}
+.plus + li {
+    background-color: rgba(255, 0, 0, 0.368);
+}
+
+[title="This is a list item"] {
+    background-color: rgba(0, 0, 255, 0.32) !important; 
+}
+
+#zaId {
+    background-color: rgba(0, 255, 255, 0.291);
+}
+
+.dalshe~li {
+background-color: rgb(227, 227, 18);
+}
+
+[type] {
+    font-style: italic;
+    color: blue;
+}
+
+.lol {
+    background-color: rgba(0, 0, 0, 0.064);
+}
+
+.nummerList>li:last-child::after {
+    content: 'і один псевдоелемент на закуску';
+    background-color: rgba(165, 42, 42, 0.303);
+    border: 2px solid blue;
+    border-radius: 3px;
+    padding: 2px;
+    margin-left: 10px;
+}
