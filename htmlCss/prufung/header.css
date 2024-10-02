@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "KymerAwon";
+  src: url("./assets/fonts/FontsFree-Net-kymerawon-regularsc.ttf");
+}
+
+@font-face {
+  font-family: "EvolveThin";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Thin\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveLight";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Light\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveRegular";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveMedium";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Medium\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveBold";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Bold\ \(PERSONAL\ USE\).otf");
+}
+
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "EvolveRegular";
+}
+.logo {
+  font-family: 'KymerAwon';
+  text-decoration: none;
+  color: #4E5158;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.headerMobile {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMobile_burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.headerMobile_burger input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.headerMobile_burger label {
+
+}
+
+.headerMobile_burger label div {
+  height: 5px;
+  background-color: #4E5158;
+  width: 100%;
+}
+
+.headerMobile_burger label div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headerMobile_burger label div:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.headerMobile_burger label div:last-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.headerMobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #4E5158;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+}
+
+.headerMobile_menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "EvolveMedium";
+ 
+}
+
+.headerMobile_logo {}
+
+.logo {}
