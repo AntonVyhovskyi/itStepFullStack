@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "KymerAwon";
+  src: url("../assets/fonts/FontsFree-Net-kymerawon-regularsc.ttf");
+}
+
+@font-face {
+  font-family: "EvolveThin";
+  src: url("../assets/fonts/MADE\ Evolve\ Sans\ Thin\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveLight";
+  src: url("../assets/fonts/MADE\ Evolve\ Sans\ Light\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveRegular";
+  src: url("../assets/fonts/MADE\ Evolve\ Sans\ Regular\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveMedium";
+  src: url("../assets/fonts/MADE\ Evolve\ Sans\ Medium\ \(PERSONAL\ USE\).otf");
+}
+
+@font-face {
+  font-family: "EvolveBold";
+  src: url("../assets/fonts/MADE\ Evolve\ Sans\ Bold\ \(PERSONAL\ USE\).otf");
+}
+
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "EvolveRegular";
+
+}
+
+.logo {
+  font-family: 'KymerAwon';
+  text-decoration: none;
+  color: #4E5158;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.headerMobile {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMobile_burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+
+}
+
+.headerMobile_burger input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 21;
+}
+
+.headerMobile_burger label {
+  width: 40px;
+}
+
+.headerMobile_burger label div {
+  height: 5px;
+  background-color: #4E5158;
+  width: 100%;
+  transition: 1s;
+  z-index: 21;
+}
+
+.headerMobile_burger label div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.headerMobile_burger label div:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.headerMobile_burger label div:last-child {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.headerMobile_burger input:checked+label {
+  position: fixed;
+  top: 43px;
+  right: 20px;
+  z-index: 23;
+}
+
+.headerMobile_burger input:checked+label div:first-child {
+  transform: rotate(-405deg);
+  top: 50%;
+  background-color: white;
+
+}
+
+.headerMobile_burger input:checked+label div:nth-child(2) {
+  transform: rotate(405deg);
+  background-color: white;
+}
+
+.headerMobile_burger input:checked+label div:last-child {
+  transform: rotate(405deg);
+  top: 50%;
+  background-color: white;
+}
+
+.headerMobile_burger input:checked~.headerMobile_menu {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.headerMobile_menu {
+  transition: 1s;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #4E5158;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.headerMobile_menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "EvolveMedium";
+
+}
+
+
+.headerMobile_logo {}
+
+.logo {}
+
+/* header normal */
+
+.headerNormal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1790px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  padding-top: 41px;
+}
+
+.headerNormal_logo {
+  transition: transform 0.3s;
+}
+
+.headerNormal_logo:hover {
+  transform: scale(1.05);
+}
+
+.headerNormal_menu {
+  display: flex;
+  gap: 72px;
+  justify-content: center;
+}
+
+.headerNormal_menu a {
+  text-decoration: none;
+  color: #4E5158;
+  font-size: 24px;
+  line-height: 28px;
+  transition: color 0.3s;
+}
+
+.headerNormal_menu a:hover {
+  color: #F1C9C4;
+}
+
+.headerNormal_leng {
+  border: none;
+  background: none;
+  font-size: 24px;
+  font-family: EvolveMedium;
+  cursor: pointer;
+}
+
+.headerNormal_leng span {
+  transition: color 0.3s;
+}
+
+.headerNormal_leng:hover span {
+  color: #F1C9C4;
+}
+
+@media (max-width:1300px) {
+  .headerNormal_menu {
+    gap: 30px;
+  }
+
+  /* .headerNormal_menu a {
+    font-size: 18px;
+  }
+  .headerNormal_leng {
+    font-size: 18px;
+  } */
+}
+
+@media (max-width: 1024px) {
+  .headerNormal {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .headerMobile {
+    display: none;
+  }
+}
+
+
+
+/*       -.-.-.-.-.-.-.-.-         GLOBAL COMPONENTS             -.-.-.-.-.-.-..-.-      */
+
+
+
+
+/*                     title fo section               */
+.titleForSection {
+  font-size: 24px !important;
+  color: #4E5158;
+}
+
+@media (min-width: 768px) {
+  .titleForSection {
+    font-size: 32px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titleForSection {
+    font-size: 48px !important;
+    font-family: EvolveThin;
+  }
+}
+
+
+/*                        button left right             */
+
+
+
+.buttonRight {
+  cursor: pointer;
+  width: 42px;
+  min-width: 42px;
+
+  position: relative;
+  height: 21px;
+}
+
+.buttonRight>img {
+  width: 32px;
+  position: relative;
+  z-index: 2;
+  animation: linkAnim3 1s infinite alternate linear;
+
+}
+
+@keyframes linkAnim3 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+
+
+.buttonRight>div {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-15%, -52%);
+  background-color: #F1C9C4;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.buttonRight>div>div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #F1C9C4;
+  animation: linkAnim4 2s infinite;
+}
+
+.buttonRight>div>div>div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #F1C9C4;
+  animation: linkAnim4 2s infinite;
+}
+
+@keyframes linkAnim4 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    border: 1px solid #F1C9C4;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    border: 1px solid #f1c9c42a;
+  }
+}
+
+.buttonRight-left {
+  transform: rotateY(180deg);
+
+}
+
+@media (min-width: 768px) {
+  .buttonRight {
+    width: 63px;
+    min-width: 63px;
+  }
+
+  .buttonRight>img {
+    width: 48px;
+  }
+
+  .buttonRight>div {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonRight {
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .buttonRight>img {
+    width: 64px;
+  }
+
+  .buttonRight>div {
+    width: 32px;
+    height: 32px;
+  }
+}
