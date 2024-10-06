@@ -60,6 +60,7 @@
 /* ----------------------Link with animation */
 .sectionOne_leftLink {
     display: flex;
+    width: 200px;
     gap: 6px;
     position: relative;
     left: 30px;
@@ -322,6 +323,7 @@
 @media (min-width:1024px)  {
     .sectionOne_leftLink {
         transition: color 0.3s;
+        width: 300px;
     }
 
     .sectionOne_leftLink:hover{
