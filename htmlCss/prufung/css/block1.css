@@ -383,14 +383,14 @@
     }
     .sectionOne_leftLink>div>div>div {
 
-        width: 55px;
-        height: 55px;
+        width: 100%;
+        height: 100%;
   
     }
     .sectionOne_leftLink>div>div>div>div {
    
-        width: 55px;
-        height: 55px;
+        width:100%;
+        height: 100%;
  
     }
     .sectionOne_sexyGirl {

@@ -118,6 +118,8 @@
        align-items: center;
        padding-left: 0px;
        padding-right: 0px;
+       flex-basis:50%;
+       width: 100%;
      
        
         
@@ -125,13 +127,17 @@
     }
 
     .about_img {
-        flex-grow: 1;
-        max-width:900px;
+        /* flex-grow: 1; */
+        max-width: 900px;
+        flex: 0 0 50%;
+        
     }
 
     .about_text {
-        width: 50%;
+        /* width: 50%; */
         max-width: 770px;
+        
+        
     }
     .about_text a {
         text-align: left;
@@ -162,6 +168,13 @@
 
     .about_text a:hover {
         color: #F1C9C4;
+    }
+}
+
+@media (min-width:1560px) {
+    .about_title {
+        
+        margin-bottom: 70px;
     }
 }
 
