@@ -3,24 +3,24 @@ console.log('--------------------exercise one--------------');
 
 let exOneOne = 'stroka'
 exOneOne = Boolean(exOneOne)
-console.log(typeof (exOneOne));
+console.log(typeof exOneOne);
 
 
 let exOneTwo = 1
 exOneTwo = Boolean(exOneTwo)
-console.log(typeof (exOneTwo));
+console.log(typeof exOneTwo);
 
 let exOneThree = '2'
 exOneThree = Number(exOneThree)
-console.log(typeof (exOneThree));
+console.log(typeof exOneThree);
 
 let exOneFour = null
 exOneFour = Boolean(exOneFour)
-console.log(typeof (exOneFour));
+console.log(typeof exOneFour);
 
 let exOneFive = undefined
 exOneFive = Boolean(exOneFive)
-console.log(typeof (exOneFive));
+console.log(typeof exOneFive);
 
 
 console.log('--------------------exercise two-------------------');
