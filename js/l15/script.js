@@ -41,13 +41,12 @@ exFour = Number(exFour)
 if (exFour >= 1 && exFour <= 12) {
     console.log('you are child');
 
-} if (exFour > 12 && exFour < 18) {
+} else if (exFour > 12 && exFour < 18) {
     console.log('you are teenager');
 
-} if (exFour > 18 && exFour < 60) {
+} else if (exFour > 18 && exFour < 60) {
     console.log('you are adult person');
-}
-if (exFour > 60) {
+} else if (exFour > 60) {
     console.log('you are so old');
 } else {
     console.log('you must indicate the number');
