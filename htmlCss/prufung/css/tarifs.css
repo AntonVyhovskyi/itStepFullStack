@@ -225,7 +225,7 @@
     .tarifs_link>div>div {
         width:40px;
         height: 40px;
-        transform: translate(-25%, -20%) !important;
+        transform: translate(29%, -20%) !important;
        
     }
 }
