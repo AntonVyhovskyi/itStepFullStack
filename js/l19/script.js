@@ -139,3 +139,5 @@ function warumIstVarNichtGud() {
     
     
 }
+
+alert('Перейди в консоль')
