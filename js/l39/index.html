@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .kub {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            
+        }
+        @keyframes anim {
+            0% {
+                transform: rotate(0);
+           
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <div class="kub">
+
+    </div>
+    <button onclick='startAnim()' style="margin-top: 30px;">Запустить анімацію</button>
+    <script src="./script.js"></script>
+</body>
+</html>
