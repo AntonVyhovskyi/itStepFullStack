@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./users.html">Users</a>
+            <a href="./index.html">Home</a>
+            <a href="./comments.html">Coments</a>
+        </nav>
+    </header>
+    <div class="send" >
+        <input type="number" class="sendInput"> 
+        <button class="sendBtn">send</button>
+    </div>
+    <main>
+
+    </main>
+    <script>
+        const main = document.querySelector('main')
+        const buttonSend = document.querySelector('.sendBtn')
+        const inputSend = document.querySelector('.sendInput')
+       
+        const postsArray = []
+        const postsXml = []
+
+
+        buttonSend.onclick = () =>{
+            let el = postsArray.find((el)=>{
+                if(el.id === Number(inputSend.value)) {
+                    return el
+                    
+                }
+            })
+            main.innerHTML = `
+            <div class='user'>
+            <div>${el.id}</div>
+            <div>${el.userId}</div>
+            <div>${el.title}</div>
+             <div>${el.body}</div>
+             </div>
+            `;
+            let el2 = postsXml.find((el)=>{
+                if(el.id === Number(inputSend.value)) {
+                    return el
+                    
+                }
+            })
+            main.innerHTML += `
+            <div class='user redBorder'>
+            <div>${el.id}</div>
+             <div>${el.userId}</div>
+            <div>${el.title}</div>
+            <div>${el.body}</div>
+             </div>
+            `
+
+            
+        }
+        console.log(inputSend);
+        console.log(buttonSend);
+        
+        
+        fetch('https://jsonplaceholder.typicode.com/posts').then(responce => {
+            return responce.json()
+
+        }).then(posts => {
+            postsArray.push(...posts) 
+            console.log(postsArray);
+            
+            
+            });
+
+
+        
+
+
+        const xmlRequest = new XMLHttpRequest()
+
+        xmlRequest.open('GET', 'https://jsonplaceholder.typicode.com/posts')
+
+        xmlRequest.send()
+
+        xmlRequest.onload = ({target: {response}}) => {
+            const posts = JSON.parse(response)
+            postsXml.push(...posts)
+            
+        }
+
+
+      
+    </script>
+</body>
+
+</html>

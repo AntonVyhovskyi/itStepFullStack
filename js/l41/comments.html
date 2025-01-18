@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="./users.html">Users</a>
+            <a href="./posts.html">Posts</a>
+            <a href="./index.html">Home</a>
+
+
+        </nav>
+    </header>
+    <div class="send" >
+        <input type="number" class="sendInput"> 
+        <button class="sendBtn">send</button>
+    </div>
+    <main>
+
+    </main>
+    <script>
+
+        const main = document.querySelector('main')
+        const buttonSend = document.querySelector('.sendBtn')
+        const inputSend = document.querySelector('.sendInput')
+
+        const commentsArray = []
+        const commentsXml = []
+
+
+        buttonSend.onclick = () => {
+            let el = commentsArray.find((el) => {
+                if (el.id === Number(inputSend.value)) {
+                    return el
+
+                }
+            })
+            main.innerHTML = `
+            <div class='user'>
+            <div>${el.id}</div>
+            <div>${el.name}</div>
+            <div>${el.email}</div>
+            <div>${el.body}</div>
+             </div>
+            `;
+            let el2 = commentsXml.find((el) => {
+                if (el.id === Number(inputSend.value)) {
+                    return el
+
+                }
+            })
+            main.innerHTML += `
+            <div class='user redBorder'>
+            <div>${el.id}</div>
+            <div>${el.name}</div>
+            <div>${el.email}</div>
+            <div>${el.body}</div>
+             </div>
+            `
+
+
+        }
+        console.log(inputSend);
+        console.log(buttonSend);
+
+
+        fetch('https://jsonplaceholder.typicode.com/comments').then(responce => {
+            return responce.json()
+
+        }).then(comments => {
+            commentsArray.push(...comments)
+            console.log(commentsArray);
+
+
+        });
+
+
+
+
+
+        const xmlRequest = new XMLHttpRequest()
+
+        xmlRequest.open('GET', 'https://jsonplaceholder.typicode.com/comments')
+
+        xmlRequest.send()
+
+        xmlRequest.onload = ({ target: { response } }) => {
+            const comments = JSON.parse(response)
+            commentsXml.push(...comments)
+
+        }
+
+       
+    </script>
+</body>
+
+</html>

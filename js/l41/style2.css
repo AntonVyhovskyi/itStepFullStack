@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #050A30;
+}
+
+header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+nav {
+    font-size: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+a {
+    font-size: 40px;
+    text-decoration: none;
+    color: #7EC8E3;
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+a:active {
+    color: #000C66;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    padding: 30px;
+}
+.user {
+    border: 2px solid #7EC8E3;
+    padding: 20px;
+    font-size: 30px;
+    color: #7EC8E3;
+}
+
+.redBorder {
+    border-color: red;
+}
+
+.send {
+    padding: 30px;
+    font-size: 30px;
+}
+
+.send>input,
+.send>button {
+font-size: 30px;
+}
