@@ -1,0 +1,137 @@
+$customBlue: #3d1480;
+$customLightBlue: #4bfce1;
+$customGray: #4b4453;
+$customLightGray: #b1a8b9;
+$customGreen: #004230;
+$customLightGreen: #00765e;
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+* {
+    font-family: "Slackey", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $customGreen;
+}
+
+h1 {
+    font-size: 40px;
+    color: $customLightGray;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    .content {
+
+        display: inline-flex;
+        width: 400px;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+
+        .tablo {
+            border: 10px solid $customLightGreen;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 20px;
+            background-color: $customLightGray;
+            color: $customBlue;
+        }
+
+        .window {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border: 10px solid $customBlue;
+            background-color: $customGray;
+            border-radius: 20px;
+
+            .target {
+                width: 30px;
+                height: 30px;
+                background-color: $customLightBlue;
+                border-radius: 50%;
+                animation: cil 5s linear forwards;
+
+                position: absolute;
+            }
+
+            @keyframes cil {
+                0% {
+                    transform: scale(0);
+                }
+
+                50% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0);
+                }
+            }
+
+            .ready {
+
+                margin-top: 150px;
+                display: none;
+                text-align: center;
+                font-size: 40px;
+                color: $customLightGray;
+
+            }
+
+        }
+
+        .button {
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            background-color: $customBlue;
+            color: $customLightGreen;
+            padding: 10px;
+            font-size: 30px;
+            border-radius: 20px;
+            border: 10px solid $customLightGray;
+
+            &:hover {
+                color: $customLightGray;
+            }
+
+            &:active {
+                color: $customGray;
+            }
+        }
+
+        .levels {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            div {
+                text-align: center;
+                flex: 1;
+               
+                border: 10px solid $customLightGreen;
+               
+                padding: 10px;
+               
+                font-size: 20px;
+                border-radius: 20px;
+                background-color: $customLightGray;
+                color: $customBlue;
+            }
+        }
+
+    }
+}
