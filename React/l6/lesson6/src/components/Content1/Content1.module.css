@@ -1,0 +1,9 @@
+.content {
+    border: 1px solid greenyellow;
+    padding: 20px;
+    margin: 20px;
+}
+
+.content button {
+    background-color: white;
+}
