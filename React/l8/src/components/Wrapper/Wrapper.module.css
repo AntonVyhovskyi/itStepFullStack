@@ -1,0 +1,12 @@
+.container {
+    padding: 60px;
+    border: 1px solid #ccc;
+    
+}
+
+.blue {
+    background-color: rgba(78, 78, 221, 0.293);
+}
+.green {
+    background-color: rgba(128, 221, 78, 0.293);
+}
