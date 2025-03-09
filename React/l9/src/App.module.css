@@ -1,0 +1,98 @@
+.app {
+    
+}
+
+.addCategory {
+   
+    padding-bottom: 16px;
+    position: relative;
+    
+}
+
+.addCategory button {
+    background-color: white;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 4px;
+
+}
+.addCategory button:hover {
+    cursor: pointer;
+    background-color: rgb(75, 212, 75);
+}
+.addCategory input {
+    background-color: white;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.addCategoryError {
+    color: red;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.item {
+    border-radius: 10px;
+    border: 4px solid rgb(9, 106, 141);
+}
+
+.item button {
+    background-color: white;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+.itemHeader button:hover {
+    background-color: rgb(203, 96, 96);
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.task {
+    border: 3px solid rgb(215, 184, 7);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.task h3 {
+    margin: 0;  
+}
+
+.taskMenu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.taskButtonChange:hover {
+    background-color: rgb(86, 86, 231);
+}
+
+.taskButtonDelete:hover {
+    background-color: rgb(231, 86, 86);
+}
