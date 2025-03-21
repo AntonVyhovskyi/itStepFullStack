@@ -1,0 +1,17 @@
+.container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.container div>div {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

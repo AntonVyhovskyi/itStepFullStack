@@ -1,0 +1,25 @@
+.container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 10px;
+}
+
+h2 {
+    color: #362E23;
+}
+
+.container>div>h3 {
+    color: #3A3C26;
+    margin-bottom: 20px;
+}
+
+.container>div>ul>li {
+    color: #3A3C26;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+
