@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.content_item {
+  height: 300px;
+  border: 2px solid coral;
+  overflow: scroll;
+  flex: 1;
+}
