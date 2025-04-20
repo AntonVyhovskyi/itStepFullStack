@@ -7,6 +7,8 @@ import App from './App.tsx'
 import Day from './components/Day/Day.tsx'
 import NewEvent from './components/NewEvent/NewEvent.tsx'
 import CorrectEvent from './components/CorrectEvent/CorrectEvent.tsx'
+import { Provider } from 'react-redux'
+import store from './state/index.tsx'
 
 const routers = createBrowserRouter([
   {
@@ -15,15 +17,15 @@ const routers = createBrowserRouter([
     children: [
       {
         path: "day/:date",
-        element: <Day/>,
+        element: <Day />,
         children: [
           {
             path: 'event/new',
-            element: <NewEvent/>
+            element: <NewEvent />
           },
           {
             path: "event/edit/:id",
-            element: <CorrectEvent/>
+            element: <CorrectEvent />
           }
         ]
       }
@@ -33,9 +35,11 @@ const routers = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={routers}/> 
-    
- 
- 
+  <Provider store={store}>
+    <RouterProvider router={routers} />
+  </Provider>
+
+
+
   ,
 )

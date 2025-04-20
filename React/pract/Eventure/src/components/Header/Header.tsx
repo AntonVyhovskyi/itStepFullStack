@@ -1,4 +1,5 @@
 import React from "react";
+import cls from './Header.module.css'
 
 
 
@@ -21,23 +22,23 @@ const Header: React.FC<HeaderProps> = ({
     };
 
     return (
-        <div className="flex items-center justify-between mb-4 px-4">
+        <div className={cls.container}>
             <button
                 onClick={prevMonth}
-                className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                className={`${cls.button} ${cls.left}`}
             >
-                ← Назад
+                <div>V</div>
             </button>
 
-            <h2 className="text-xl font-semibold">
+            <h2 className={cls.month}>
                 {currentMonth.format("MMMM YYYY")}
             </h2>
 
             <button
                 onClick={nextMonth}
-                className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                className={`${cls.button} ${cls.right}`}
             >
-                Вперед →
+                <div>V</div>
             </button>
         </div>
     );

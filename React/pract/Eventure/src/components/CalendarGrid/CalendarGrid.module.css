@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.gridContainer {
+    @apply grid grid-cols-7 gap-2 ;
+}
+
+.date {
+    color: #94AABD;
+   
+   
+}
+
+.date>div {
+width: 30px;
+height: 30px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+transition: transform 0.3s, box-shadow 0.3s;
+
+
+
+
+}
+
+.date>div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 3px black;
+    cursor: pointer;
+}
+
+.weekDay {
+    color: #9C9CC2;
+   text-align: center;
+}
+
+.now>div {
+    background-color: #645081;
+}
+
+.isEvent>div {
+    box-shadow: 0px 0px 2px rgb(246, 246, 246);
+}
+
+.isEvent>div:hover {
+    box-shadow: 0px 2px 5px rgb(246, 246, 246);
+}
+
+
+@media (pointer: coarse) {
+    .date>div:hover {
+        transform: translateY(0);
+        box-shadow: 0px 0px 0px black;
+    }
+    .isEvent>div:hover {
+        box-shadow: 0px 0px 0px rgb(246, 246, 246);
+    }
+ }

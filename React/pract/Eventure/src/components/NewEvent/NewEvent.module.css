@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+.fullBlurContainer {
+    @apply text-2xl absolute top-0 left-0 min-h-full w-full flex justify-center items-center p-2;
+    background: #dfd2abaf;
+   
+    
+    
+}
+
+.container {
+    @apply rounded-3xl overflow-hidden max-w-[1000px]; 
+    background: #dfd2abea;
+    box-shadow: 5px 5px 10px #7C6624;
+    min-width:300px;
+}
+
+.top {
+    @apply relative p-2 text-base flex justify-between gap-2;
+    background-color: 	#1C1C57;
+    color: #DFD2AB;
+}
+
+.topGoBackButton {
+    @apply text-base  cursor-pointer;
+    color: #BEAA6E;
+}
+.topTitle {
+
+}
+
+.form {
+    @apply p-2 w-full;
+}
+
+.form>div {
+    @apply relative w-full mb-7 mt-4;
+    color: #1C1C57
+}
+
+.form>div:nth-child(2) {
+    @apply  mb-2 ;
+  
+}
+
+.form>div>input {
+    @apply  p-2 text-base w-full ;
+    border-bottom: 1px solid #1C1C57;
+    
+}
+
+.form>div>.textarea {
+    @apply rounded-2xl p-2 text-base w-full;
+    border: 1px solid #1C1C57;
+}
+
+.form>div>label {
+    @apply absolute left-2 top-2  text-base transition ;
+    pointer-events: none;
+    transition: top 0.3s, left 0.3s, font-size 0.3s;
+}
+
+.form>div>input:focus+label,
+.form>div>.textarea:focus+label,
+.form>div>input:not(:placeholder-shown)+label,
+.form>div>.textarea:not(:placeholder-shown)+label {
+    top: -20px;
+    left: 0;
+    @apply text-xs;
+}
+
+.form>.formSubmitButton {
+   @apply ml-2 cursor-pointer;
+    color: 	#A089C0;
+}
