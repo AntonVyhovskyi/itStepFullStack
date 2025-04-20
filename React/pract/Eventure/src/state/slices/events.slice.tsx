@@ -29,8 +29,10 @@ const eventsSlice = createSlice({
             localStorage.setItem('events', JSON.stringify(state.events))
         },
         correctnEvent(state, action) {
+            debugger
             const index = state.events.findIndex(event => event.id === action.payload.id);
-            if (index) {
+            debugger
+            if (index || index === 0) {
                 state.events[index] = {...action.payload}
                 localStorage.setItem('events', JSON.stringify(state.events))
             } else {

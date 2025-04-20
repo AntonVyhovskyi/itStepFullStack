@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+.fullMonitorContainer {
+    @apply text-7xl text-blue-700 p-2  absolute top-0 left-0 w-full min-h-full bg-cyan-500/50 flex items-center justify-center;
+    background: rgba(255, 255, 255, 0.1);
+   
+    backdrop-filter: blur(3px);
+}
+
+.container {
+    @apply p-2.5 rounded-3xl w-[1000px] relative blur-none;
+    background-color: #1c1c5700;
+
+}
+
+
+
+.addNewEvent {
+    @apply w-full p-1 text-2xl text-center border-2 rounded-2xl cursor-pointer transition-colors;
+    border-color: #8E8EC2;
+    color: #8E8EC2;
+    
+    
+}
+
+.addNewEvent:hover {
+    background-color: #beaa6e58;
+}
+
+.blurWrapper {
+    @apply absolute inset-0;
+    
+
+}
+
+.event {
+    @apply w-full p-1 text-2xl text-center border-2 rounded-2xl  transition-colors mb-2;
+    color: #85A4BD;
+}
+
+.eventTop {
+    @apply flex justify-between gap-2 items-center px-2;
+}
+.eventTitle {
+    @apply text-base sm:text-lg;
+}
+.eventButtons {
+    @apply flex flex-col  text-base; 
+}
+.eventButtons>button:first-child {
+    color: #BEAA6E;
+}
+.eventButtons>button:last-child {
+    color: #DFD2AB;
+}
+
+
+.eventDiscription {
+    @apply  text-base text-left px-2;
+    color: #DFD2AB;
+
+}
+
+.containerTop {
+    @apply text-base flex items-center justify-between mb-2;
+    color: #DFD2AB;
+}
+
+.goBack {
+    @apply text-lg rounded-3xl p-1  cursor-pointer border-2;
+    color: #BEAA6E;
+   
+}
