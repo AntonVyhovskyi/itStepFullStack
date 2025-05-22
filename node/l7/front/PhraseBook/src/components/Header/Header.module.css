@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.logo span {
+  color: #0077ff;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+.nav a.active {
+  color: #0077ff;
+  border-bottom: 2px solid #0077ff;
+}

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 280px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.linkImg {
+  overflow: hidden;
+  border-radius: 16px;
+  margin-top: 1rem;
+}
+
+.linkImg img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
