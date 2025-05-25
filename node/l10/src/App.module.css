@@ -67,3 +67,11 @@ button:hover {
 .buttonAddBook button:hover {
   background-color: #218838;
 }
+
+.pages {
+    display: flex;
+}
+
+.pages div {
+    padding: 10px;
+}
