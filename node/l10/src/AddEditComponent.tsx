@@ -14,8 +14,9 @@ interface AddEditProps {
     rating?: number
     apiURL: string,
     setEditNow?: (a: null) => void,
-    fetchbooks: () => void
-    setAddNow?: (v: false) => void
+    fetchbooks: (v:number) => void,
+    setAddNow?: (v: false) => void,
+    pageNow: number
 
 }
 
@@ -29,6 +30,7 @@ const AddEdit: FunctionComponent<AddEditProps> = ({
     apiURL,
     setEditNow,
     fetchbooks,
+    pageNow,
     setAddNow }) => {
     const validationSchema = object({
         title: string().max(50),
@@ -46,7 +48,7 @@ const AddEdit: FunctionComponent<AddEditProps> = ({
                 await axios.post(`${apiURL}books`, values);
                 setAddNow?.(false);
             }
-            fetchbooks();
+            fetchbooks(pageNow);
         } catch (error) {
             console.log(error);
         }

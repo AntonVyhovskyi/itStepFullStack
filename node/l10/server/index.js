@@ -33,10 +33,28 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (method === GET && pathname === '/books') {
+
+
         try {
-            const result = await client.query('SELECT * FROM books');
+            const page = parseInt(parsedUrl.query.page) || 1;
+            const limit = parseInt(parsedUrl.query.limit) || 5;
+            const offset = (page - 1) * limit;
+
+            const booksResult = await client.query('SELECT * FROM books ORDER BY id LIMIT $1 OFFSET $2',
+                [limit, offset]
+            );
+
+            const countResult = await client.query('SELECT count(*) FROM books');
+            const totalItems = parseInt(countResult.rows[0].count);
+            const totalPages = Math.ceil(totalItems / limit);
+
             res.writeHead(200);
-            res.end(JSON.stringify(result.rows));
+            res.end(JSON.stringify({
+                books: booksResult.rows,
+                currentPage: page,
+                totalPages,
+                totalItems
+            }));
         } catch (error) {
             res.writeHead(500);
             res.end(JSON.stringify({ error: error.message }));

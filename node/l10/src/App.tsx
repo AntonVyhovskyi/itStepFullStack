@@ -9,12 +9,21 @@ function App() {
   const [fetchBooksError, setFetchBooksError] = useState(false)
   const [editNow, setEditNow] = useState<number | null>(null)
   const [addNow, setAddNow] = useState<boolean>(false)
+  const [pageNow, setPageNow] = useState<number>(1)
+  const [pages, setPages] = useState<number[]>([])
 
   const apiURL = 'http://localhost:3000/'
-  const fetchbooks = async () => {
+  const fetchbooks = async (page: number) => {
     try {
-      const response = await axios.get(`${apiURL}books`)
-      setBooks(response.data)
+      const response = await axios.get(`${apiURL}books?page=${page}&limit=5`)
+      setBooks(response.data.books)
+      setPages([])
+      const pagesArray = []
+      for (let i = 1; i <= response.data.totalPages; i++) {
+        pagesArray.push(i)
+      }
+      setPages(pagesArray)
+
       setFetchBooksError(false)
     } catch (error) {
       setFetchBooksError(true)
@@ -23,14 +32,14 @@ function App() {
     }
   }
   useEffect(() => {
-    fetchbooks()
+    fetchbooks(1)
   }, [])
 
 
   const deleteBookHundler = async (id: number) => {
     try {
       await axios.delete(`${apiURL}books/${id}`)
-      fetchbooks()
+      fetchbooks(pageNow)
     } catch (error) {
       console.log('не вдалося видалити');
 
@@ -38,6 +47,12 @@ function App() {
   }
   return (
     <div className={cls.container}>
+      <div className={cls.pages}>
+        {pages.map(el => (<>
+          {el === pageNow ? <div key={el}>{el}</div> : <button onClick={()=>{fetchbooks(el); setPageNow(el)}}>{el}</button>}
+          </>
+        ))}
+      </div>
 
       {fetchBooksError ? <div>error</div> : books.map((el, indx) =>
       (
@@ -55,7 +70,7 @@ function App() {
       )
       )}
 
-      <div className={cls.buttonAddBook}><button onClick={()=>{setAddNow(true)}}>+</button></div>
+      <div className={cls.buttonAddBook}><button onClick={() => { setAddNow(true) }}>+</button></div>
 
       {(typeof editNow === 'number') && <AddEdit
         type="edit"
@@ -66,6 +81,7 @@ function App() {
         rating={books[editNow].rating}
         apiURL={apiURL}
         setEditNow={setEditNow}
+        pageNow={pageNow}
         fetchbooks={fetchbooks}
       />}
       {
@@ -74,6 +90,7 @@ function App() {
           type="add"
           apiURL={apiURL}
           setAddNow={setAddNow}
+          pageNow={pageNow}
           fetchbooks={fetchbooks}
         />
 
