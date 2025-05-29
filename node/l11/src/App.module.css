@@ -1,0 +1,89 @@
+.header {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.citys {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.citys div {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listItem {
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listItem h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.listItem h4 {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.listItemOrg,
+.listItemPrize,
+.listItemPlayers {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.statistics {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.statistics div {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.navLink {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navLink:hover {
+  background: #f0f0f0;
+}
+
+.activeNavLink {
+  background: #333;
+  color: white;
+}
