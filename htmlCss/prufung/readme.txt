@@ -6,4 +6,4 @@ I also added subtle CSS animations to enhance the user experience.
 
 The layout was built using a mobile-first approach, ensuring excellent performance and appearance across different screen sizes and devices.
 
-The project is hosted on GitHub and can be viewed here: [insert your link]
+The project is hosted on GitHub and can be viewed here: https://antonvyhovskyi.github.io/itStepFullStack/htmlCss/prufung/index.html
