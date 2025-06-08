@@ -1,0 +1,59 @@
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.category {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}

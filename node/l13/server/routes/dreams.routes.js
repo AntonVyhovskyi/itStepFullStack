@@ -69,7 +69,7 @@ const DUMMY_DREAMS = [
 ];
 
 
-router.get('/:id', (req, res, next) => {
+router.get('/dreamById/:id', (req, res, next) => {
     const id = req.params.id
     const obj = DUMMY_DREAMS.find(el => el.id === id)
     if (!obj) {
@@ -78,6 +78,17 @@ router.get('/:id', (req, res, next) => {
         return next(error);
     }
     res.status(200).json(obj)
+})
+
+router.get('/dreamsByUserId/:id', (req, res, next) => {
+    const id = req.params.id
+    const objectsArray = DUMMY_DREAMS.filter(el=>el.creator === id)
+    if (!objectsArray) {
+        const error = new Error('Явно передана помилка');
+        error.status = 400; // або 403, 500 тощо
+        return next(error);
+    }
+    res.status(200).json(objectsArray)
 })
 
 module.exports = router;
