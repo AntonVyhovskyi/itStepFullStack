@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+
+}
+
+.header {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.headerEmail {
+    font-weight: 500;
+    color: #333;
+    margin-right: 1rem;
+    font-size: 0.95rem;
+}
+
+.headerNav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.headerNav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.headerNav a:hover {
+    background-color: #eaeaea;
+    color: #222;
+}
+
+.headerNavActiveLink {
+    background-color: #007bff;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.exitButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exitButton:hover {
+    background-color: #c82333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

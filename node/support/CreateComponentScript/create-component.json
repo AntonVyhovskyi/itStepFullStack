@@ -1,0 +1,5 @@
+"scripts": {
+ "gen": "node tools/create-component.cjs"
+}
+
+// npm run gen:component MyComponent

@@ -1,0 +1,74 @@
+.container {
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 16px;
+    margin: 4px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+/* Кнопки категорій */
+.activeCategoryButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.notActiveCategoryButton {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.notActiveCategoryButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* Блок майстра */
+.master {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.masterName {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.masterCategory {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Кнопка "Залишити заявку" */
+.createReqButton {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.createReqButton:hover {
+    background-color: #218838;
+}

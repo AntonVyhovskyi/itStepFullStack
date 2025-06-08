@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
