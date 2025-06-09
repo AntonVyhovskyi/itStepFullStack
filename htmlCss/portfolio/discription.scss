@@ -1,0 +1,204 @@
+.discription {
+
+    .discription_container {
+        width: 100%;
+        background-color: #080808;
+        padding-bottom: 20px;
+
+        .discription_top {
+            background-color: #080808;
+            padding-top: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            @media (min-width: 800px) {
+                padding-top: 120px;
+
+
+
+            }
+
+            @media (min-width: 1200px) {
+                flex-direction: row-reverse;
+                max-width: 1100px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin: 0 auto;
+                justify-content: space-between;
+                padding-bottom: 40px;
+                padding-top: 120px;
+
+
+
+            }
+
+            .top_foto {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+
+
+                @media (min-width: 600px) {
+                    width: 300px;
+                    height: 300px;
+
+                }
+
+                @media (min-width: 800px) {
+                    width: 350px;
+                    height: 350px;
+
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .top_left {
+                color: #FFFFFF;
+
+                font-size: 10px;
+                
+
+                @media (min-width: 600px) {
+                    font-size: 12px;
+
+                }
+
+
+                @media (min-width: 1200px) {
+                    max-width: 480px;
+
+                }
+
+
+                h2 {
+                    font-size: 2em;
+                    margin-bottom: 10px;
+                    @media (min-width: 1200px) {
+                        margin-bottom: 20px;
+    
+                    }
+    
+                }
+
+                p {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    @media (min-width: 1200px) {
+                        margin-bottom: 30px;
+    
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 1.4em;
+                    padding: 7px 15px 7px 7px;
+                    background-color: #62BA1B;
+                    color: #FFFFFF;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.349);
+                    transition: 0.2s;
+
+                    &:active {
+                        box-shadow: none;
+                        transform: translate(2px, 2px);
+
+                    }
+
+                    &:hover {
+                        @media (min-width: 1200px) {
+
+                            background-color: #9C9C9C;
+
+
+                        }
+
+                    }
+
+
+                }
+            }
+
+        }
+
+        .workWith {
+            color: white;
+            margin: 0 auto;
+            max-width: 1100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+
+            
+        }
+
+        .discription_bot {
+
+            padding-top: 20px;
+            display: flex;
+            gap: 20px;
+            max-width: 1100px;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 auto;
+
+            .bot_item {
+                border: 1px solid rgba(128, 128, 128, 0.373);
+                display: inline-flex;
+
+                gap: 10px;
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-size: 14px;
+                    color: gray;
+
+                    @media (min-width: 600px) {
+                        font-size: 16px;
+
+                    }
+                }
+
+                .item_img {
+                    min-width: 20px;
+                    max-width: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    @media (min-width: 600px) {
+                        min-width: 30px;
+                        max-width: 30px;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+}

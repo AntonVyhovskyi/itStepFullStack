@@ -1,0 +1,297 @@
+.cases {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (min-width: 500px) {
+  .cases {
+    padding-top: 45px;
+  }
+}
+.cases_title {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.cases_title h2 {
+  margin-bottom: 10px;
+}
+.cases_title div {
+  font-size: 0.66em;
+  color: #9C9C9C;
+}
+@media (min-width: 900px) {
+  .cases {
+    padding-top: 60px;
+  }
+  .cases_title {
+    font-size: 24px;
+  }
+}
+.cases_items {
+  display: none;
+}
+.cases_items .item_img {
+  border: 2px solid #9C9C9C;
+  width: 100%;
+}
+.cases_items .item_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 500px) {
+  .cases .cases_items-mobile {
+    display: none;
+  }
+}
+.cases .cases_items-mobile .item {
+  border: 2px solid #9C9C9C;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.cases .cases_items-mobile .item .item_discription h4 {
+  color: #FFA217;
+  background-color: #FFF6E9;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.cases .cases_items-mobile .item .item_discription h3 {
+  margin-bottom: 10px;
+}
+.cases .cases_items-mobile .item .item_discription .item_img {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.cases .cases_items-mobile .item .item_discription .item_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cases .cases_items-mobile .item .item_discription p {
+  margin-bottom: 10px;
+}
+.cases .cases_items-mobile .item .item_discription a {
+  color: white;
+  background-color: #FFA217;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.cases .item-b .item_discription h4 {
+  background-color: #D0E6FF !important;
+  color: #000AFF !important;
+}
+.cases .item-b .item_discription a {
+  background-color: #000AFF !important;
+}
+.cases .item-g .item_discription h4 {
+  background-color: #E0FFF8 !important;
+  color: #2AB090 !important;
+}
+.cases .item-g .item_discription a {
+  background-color: #2AB090 !important;
+}
+.cases .cases_items {
+  padding-top: 30px;
+}
+@media (min-width: 500px) {
+  .cases .cases_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  .cases .cases_items {
+    gap: 80px;
+  }
+}
+.cases .cases_items .item {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.cases .cases_items .item .item_img {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cases .cases_items .item .item_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+.cases .cases_items .item .item_discription {
+  font-size: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+@media (min-width: 800px) {
+  .cases .cases_items .item .item_discription {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1000px) {
+  .cases .cases_items .item .item_discription {
+    font-size: 14px;
+    gap: 20px;
+  }
+}
+.cases .cases_items .item .item_discription h4 {
+  color: #FFA217;
+  background-color: #FFF6E9;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.cases .cases_items .item .item_discription h3 {
+  font-size: 2em;
+}
+.cases .cases_items .item .item_discription p {
+  color: #9C9C9C;
+  font-size: 1em;
+}
+.cases .cases_items .item .item_discription a {
+  font-size: 1em;
+  color: white;
+  background-color: #FFA217;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.cases .cases_items .item .item_discription a:hover {
+  background-color: #a86d13;
+}
+@media (min-width: 1000px) {
+  .cases .cases_items .item .item_discription a {
+    margin-top: 20px;
+  }
+}
+.cases .cases_items .item-reverse-g {
+  flex-direction: row;
+}
+.cases .cases_items .item-reverse-g .item_discription h4 {
+  background-color: #E0FFF8 !important;
+  color: #2AB090 !important;
+}
+.cases .cases_items .item-reverse-g .item_discription a {
+  background-color: #2AB090 !important;
+}
+.cases .cases_items .item-reverse-g .item_discription a:hover {
+  background-color: #1d715d !important;
+}
+.cases .cases_items .item-b .item_discription h4 {
+  background-color: #D0E6FF !important;
+  color: #000AFF !important;
+}
+.cases .cases_items .item-b .item_discription a {
+  background-color: #000AFF !important;
+}
+.cases .cases_items .item-b .item_discription a:hover {
+  background-color: #070a66 !important;
+}
+
+.learning {
+  width: 100%;
+  background-color: black;
+  font-size: 14px;
+  padding-top: 20px;
+}
+@media (min-width: 500px) {
+  .learning {
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 700px) {
+  .learning {
+    font-size: 16px;
+  }
+}
+.learning h3 {
+  font-size: 1.8em;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 2;
+  color: white;
+}
+@media (min-width: 700px) {
+  .learning h3 {
+    margin-bottom: 30px;
+  }
+}
+.learning .learning_items {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (min-width: 500px) {
+  .learning .learning_items .learning_item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+@media (min-width: 700px) {
+  .learning .learning_items .learning_item {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+}
+.learning .learning_items .learning_item p {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+@media (min-width: 500px) {
+  .learning .learning_items .learning_item p {
+    flex: 1;
+  }
+}
+.learning .learning_items .learning_item div {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (min-width: 500px) {
+  .learning .learning_items .learning_item div {
+    max-width: 300px;
+    flex: 1;
+  }
+}
+.learning .learning_items .learning_item div img {
+  width: 100%;
+  transform: scaleY(1.1);
+}
+@media (min-width: 500px) {
+  .learning .learning_items .learning_item-reverse {
+    flex-direction: row-reverse;
+  }
+}/*# sourceMappingURL=cases.css.map */

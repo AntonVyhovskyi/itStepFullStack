@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="discription.css">
+    <link rel="stylesheet" href="cases.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_container-desktop">
+                <div class="label">toto<span>Portfolio</span></div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#cases">Case Studies</a>
+                        </li>
+                        <li>
+                            <a href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <a href="https://github.com/AntonVyhovskyi" target="_blank">
+                        <img src="./icons/icons8-github-24.png" alt="github">
+                    </a>
+                </div>
+            </div>
+
+            <div class="header_container-mobile">
+                <div class="label">toto<span>Portfolio</span></div>
+
+                <input id="burger" type="checkbox">
+                <label for="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
+
+
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="linkOnBurgerMenu" href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a class="linkOnBurgerMenu" href="#cases">Case Studies</a>
+                        </li>
+                        <li>
+                            <a class="linkOnBurgerMenu" href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <div class="discription" id="home">
+            <div class="discription_container">
+                <div class="discription_top">
+                    <div class="top_foto">
+                        <img src="./img/myFoto.jpg" alt="foto">
+
+                    </div>
+                    <div class="top_left">
+                        <h2>Anton Vyhovskyi</h2>
+                        <p>I am a dedicated and detail-oriented web developer with a strong commitment to delivering
+                            high-quality solutions. My approach to development is methodical and results-driven,
+                            ensuring that every project I work on is not only functional but also scalable and optimized
+                            for the best user experience. With a solid understanding of both front-end and back-end
+                            technologies, I am passionate about staying updated with the latest industry trends and
+                            continuously improving my skills to provide innovative solutions.
+                        </p>
+                        <a href="#cases">Let's get started ></a>
+                    </div>
+
+                </div>
+                <div class="workWith"> Worked with</div>
+                <div class="discription_bot">
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/html.svg" alt="html icon">
+                        </div>
+                        <span>HTML</span>
+                    </div>
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/css3-alt-brands.svg" alt="css icon">
+                        </div>
+                        <span>CSS</span>
+                    </div>
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/js.svg" alt="js icon">
+                        </div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/ts.svg" alt="ts icon">
+                        </div>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/git.svg" alt="git icon">
+                        </div>
+                        <span>Git</span>
+                    </div>
+                    <div class="bot_item">
+                        <div class="item_img">
+                            <img src="./icons/techologies/react-brands.svg" alt="react icon">
+                        </div>
+                        <span>React</span>
+                    </div>
+                    <div class="bot_item" id="cases">
+                        <div class="item_img">
+                            <img src="./icons/techologies/node-js-brands.svg" alt="node icon">
+                        </div>
+                        <span>NodeJS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- --------------------------------      CASES         --------------------------------- -->
+        <div class="cases">
+            <div class="cases_title">
+                <h2>Case Studies</h2>
+                <div>Solving user & business problems since last 15+ years.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+
+
+            <!-- cases items desctop -->
+
+
+            <div class="cases_items">
+                <div class="cases_item item">
+                    <div class="item_img">
+                        <img src="./img/cases/layout/image.png" alt="case1">
+                    </div>
+                    <div class="item_discription">
+                        <h4>Layout</h4>
+                        <h3>Balance Studio</h3>
+                        <p>Exam project for final assessment.
+                            Developed a responsive website layout for a fitness studio using HTML and CSS.
+                            The project followed a mobile-first approach and included adaptive layout techniques to
+                            ensure a consistent user experience across various screen sizes.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/htmlCss/prufung"
+                            target="_blank" class="linkToCaseOfStudy">View case study ></a>
+                    </div>
+
+                </div>
+                <div class="cases_item item item-reverse-g">
+                    <div class="item_img">
+                        <img src="./img/cases/js/image.png" alt="case1">
+                    </div>
+                    <div class="item_discription">
+                        <h4>JavaScript</h4>
+                        <h3>Aim Trainer</h3>
+                        <p>This project is an interactive browser-based reaction game, created as part of a JavaScript
+                            exam.
+                            The goal of the game is to click on targets that appear randomly on the screen before they
+                            disappear. Each successful click increases the score, while a missed target ends the game
+                            and saves the result.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/js/practika"  target="_blank" class="linkToCaseOfStudy">View case study ></a>
+                    </div>
+
+                </div>
+                <div class="cases_item item item-b">
+                    <div class="item_img" >
+                        <img src="./img/cases/react/image.png"  alt="case1">
+                    </div>
+                    <div class="item_discription">
+                        <h4>React</h4>
+                        <h3>Eventure</h3>
+                        <p>This is an event calendar project built with React, where users can add, edit, and delete events by date. I used Redux Toolkit for state management, 
+                            Tailwind CSS for styling, Formik and Yup for form handling and validation, UUID for ID generation, and Day.js for working with dates.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/React/pract/Eventure" target="_blank" class="linkToCaseOfStudy">View case study ></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- cases items mobile -->
+            <div class="cases_items-mobile">
+                <div class="cases_item item">
+
+                    <div class="item_discription">
+                        <h4>Layout</h4>
+
+                        <h3>Balance Studio</h3>
+                        <div class="item_img">
+                            <img src="./img/cases/layout/Instagram post - 1.png" alt="case1">
+                        </div>
+                        <p>Exam project for final assessment.
+                            Developed a responsive website layout for a fitness studio using HTML and CSS.
+                            The project followed a mobile-first approach and included adaptive layout techniques to
+                            ensure a consistent user experience across various screen sizes.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/js/practika"  target="_blank">View case study ></a>
+                    </div>
+                </div>
+                <div class="cases_item item item-b">
+
+                    <div class="item_discription">
+                        <h4>JavaScript</h4>
+
+                        <h3>Aim Trainer</h3>
+                        <div class="item_img">
+                            <img src="./img/cases/js/image.png" alt="case1">
+                        </div>
+                        <p>This project is an interactive browser-based reaction game, created as part of a JavaScript
+                            exam.
+                            The goal of the game is to click on targets that appear randomly on the screen before they
+                            disappear. Each successful click increases the score, while a missed target ends the game
+                            and saves the result.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/js/practika"  target="_blank">View case study ></a>
+                    </div>
+                </div>
+                <div class="cases_item item item-g">
+
+                    <div class="item_discription">
+                        <h4 class="">React</h4>
+
+                        <h3>Eventure</h3>
+                        <div class="item_img">
+                            <img src="./img/cases/react/image.png" alt="case1">
+                        </div>
+                        <p>This is an event calendar project built with React, where users can add, edit, and delete events by date. I used Redux Toolkit for state management, 
+                            Tailwind CSS for styling, Formik and Yup for form handling and validation, UUID for ID generation, and Day.js for working with dates.</p>
+                        <a href="https://github.com/AntonVyhovskyi/itStepFullStack/tree/main/React/pract/Eventure" target="_blank" >View case study ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="learning">
+            <h3>About Me & My Learning Journey</h3>
+            <div class="learning_items">
+                <div class="learning_item">
+                    <p>In 2022, while working as a general laborer at a machine-building factory,
+                        I encountered a specialist who was developing an application to
+                        facilitate communication with robotic transporters. I was truly impressed
+                        by his work—he was using code to create tools that made our tasks easier.
+                        That’s when I realized I wanted to become a web developer.</p>
+                    <div>
+                        <img src="./img/learning/Zavod.png" alt="">
+                    </div>
+                </div>
+                <div class="learning_item  learning_item-reverse">
+                    <p>I started learning HTML and CSS on my own, spending months practicing
+                        front-end development. Over time, I noticed gaps in my knowledge, which
+                        led me to take a four-month online course focused on web layout.
+                        There, I improved my skills in HTML, CSS, and JavaScript for building
+                        user interfaces.</p>
+                    <div>
+                        <img src="./img/learning/HtmlCss.png" alt="">
+                    </div>
+                </div>
+                <div class="learning_item">
+                    <p>While in Germany, the job center offered me a career orientation course.
+                        Along with language training, I was assigned a two-month internship at a company
+                        that managed websites for local businesses.
+                        Their work wasn’t focused on development, but rather on maintaining websites
+                        and handling organizational tasks.</p>
+                </div>
+                <div class="learning_item ">
+                    <p>However, they asked me to create a website using WordPress.
+                        Since the site required a company search function with filters,
+                        I first built the layout and then integrated it into WordPress.
+                        This was my first experience with PHP and WordPress,
+                        and I successfully completed the task, receiving a letter of appreciation.</p>
+                    <div>
+                        <img src="./img/learning/wordpress.png" alt="">
+                    </div>
+                </div>
+                <div class="learning_item learning_item-reverse">
+                    <p>While attending the integration language courses,
+                        I studied React on my own, and later Node.js. uring this time,
+                        I was introduced to full-stack development and significantly
+                        enhanced my web development skills. </p>
+                    <div>
+                        <img src="./img/learning/react.png" alt="">
+                    </div>
+                </div>
+
+                <div class="learning_item">
+                    <p>After completing the language courses,
+                        I began searching for a job, but since employers didn’t consider my documents
+                        sufficient to validate my professional expertise,
+                        I decided to take a regular job and simultaneously enrolled in an
+                        11-month course at the IT online school ItStepAcademy.</p>
+                </div>
+
+
+                <div class="learning_item">
+                    <p>
+                        This school was financially accessible, and it offered a reputable diploma.
+                        Most importantly, I was able to review, catch up on missed material,
+                        and refine my web development skills, preparing myself to launch my career.
+                        The course covered HTML, CSS, JS, TS, and React,
+                        including state management with Redux. Additionally, it provided
+                        foundational knowledge of backend technologies such as Node.js,
+                        Express, and version control with Git.</p>
+                    <div>
+                        <img src="./img/learning/diplom.png" alt="">
+                    </div>
+                </div>
+                <div class="learning_item">
+                    <p>I am confident that I have chosen the right path and am eager to
+                        continue growing as a web developer. I am committed to constantly
+                        improving my skills, working on real-world projects, and contributing to the creation
+                        of high-quality and user-friendly web applications.
+                        I believe my experience and knowledge will help me
+                        succeed in this field and become a valuable asset to any team.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contacts" id="contacts">
+
+            <h3>Contact me</h3>
+
+            <div class="contacts_items">
+                <div class="contacts_item">
+                    <a href="https://t.me/totouam"><img src="./icons/icons8-tg.svg" alt=""><span>@totouam</span></a>
+                </div>
+                <div class="contacts_item">
+                    <a href="https://wa.me/491776367494"><img src="./icons/icons8-viber.svg" alt="">+49 177 636 7494</a>
+                </div>
+                <div class="contacts_item">
+                    <a href="viber://chat?number=%2B380638332762"><img src="./icons/icons8-whatsapp.svg" alt="">+380 63
+                        833 2762</a>
+                </div>
+                <div class="contacts_item">
+                    <a type="email" href="mailto:vygovskijanton1@gmail.com"><img
+                            src="./icons/icons8-neuer-beitrag-50.png" alt="">vygovskijanton1@gmail.com</a>
+                </div>
+                <div class="contacts_item">
+                    <a type="email" href="https://www.linkedin.com/in/anton-vyhovskyi-697626289/"><img
+                            src="./icons/icons8-linkedin.svg" alt="">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

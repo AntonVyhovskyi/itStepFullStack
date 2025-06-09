@@ -1,0 +1,162 @@
+.discription .discription_container {
+  width: 100%;
+  background-color: #080808;
+  padding-bottom: 20px;
+}
+.discription .discription_container .discription_top {
+  background-color: #080808;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 800px) {
+  .discription .discription_container .discription_top {
+    padding-top: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .discription .discription_container .discription_top {
+    flex-direction: row-reverse;
+    max-width: 1100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 120px;
+  }
+}
+.discription .discription_container .discription_top .top_foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .discription .discription_container .discription_top .top_foto {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 800px) {
+  .discription .discription_container .discription_top .top_foto {
+    width: 350px;
+    height: 350px;
+  }
+}
+.discription .discription_container .discription_top .top_foto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.discription .discription_container .discription_top .top_left {
+  color: #FFFFFF;
+  font-size: 10px;
+}
+@media (min-width: 600px) {
+  .discription .discription_container .discription_top .top_left {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .discription .discription_container .discription_top .top_left {
+    max-width: 480px;
+  }
+}
+.discription .discription_container .discription_top .top_left h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+@media (min-width: 1200px) {
+  .discription .discription_container .discription_top .top_left h2 {
+    margin-bottom: 20px;
+  }
+}
+.discription .discription_container .discription_top .top_left p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+@media (min-width: 1200px) {
+  .discription .discription_container .discription_top .top_left p {
+    margin-bottom: 30px;
+  }
+}
+.discription .discription_container .discription_top .top_left a {
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 7px 15px 7px 7px;
+  background-color: #62BA1B;
+  color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.349);
+  transition: 0.2s;
+}
+.discription .discription_container .discription_top .top_left a:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+@media (min-width: 1200px) {
+  .discription .discription_container .discription_top .top_left a:hover {
+    background-color: #9C9C9C;
+  }
+}
+.discription .discription_container .workWith {
+  color: white;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+}
+.discription .discription_container .discription_bot {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.discription .discription_container .discription_bot .bot_item {
+  border: 1px solid rgba(128, 128, 128, 0.373);
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.discription .discription_container .discription_bot .bot_item span {
+  font-size: 14px;
+  color: gray;
+}
+@media (min-width: 600px) {
+  .discription .discription_container .discription_bot .bot_item span {
+    font-size: 16px;
+  }
+}
+.discription .discription_container .discription_bot .bot_item .item_img {
+  min-width: 20px;
+  max-width: 20px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .discription .discription_container .discription_bot .bot_item .item_img {
+    min-width: 30px;
+    max-width: 30px;
+  }
+}
+.discription .discription_container .discription_bot .bot_item .item_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=discription.css.map */

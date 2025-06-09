@@ -1,0 +1,14 @@
+"In 2022, while working as a general laborer at a machine-building factory, I encountered a specialist who was developing an application to facilitate communication with robotic transporters. I was truly impressed by his work—he was using code to create tools that made our tasks easier. That’s when I realized I wanted to become a web developer."
+
+"I started learning HTML and CSS on my own, spending months practicing front-end development. Over time, I noticed gaps in my knowledge, which led me to take a four-month online course focused on web layout. There, I improved my skills in HTML, CSS, and JavaScript for building user interfaces."
+
+"While in Germany, the job center offered me a career orientation course. Along with language training, I was assigned a two-month internship at a company that managed websites for local businesses. Their work wasn’t focused on development, but rather on maintaining websites and handling organizational tasks."
+
+"However, they asked me to create a website using WordPress. Since the site required a company search function with filters, I first built the layout and then integrated it into WordPress. This was my first experience with PHP and WordPress, and I successfully completed the task, receiving a letter of appreciation."
+
+"While attending the integration language courses, I studied React on my own, and later Node.js. During this time, I was introduced to full-stack development and significantly enhanced my web development skills. After completing the language courses, I began searching for a job, but since employers didn’t consider my documents sufficient to validate my professional expertise, I decided to take a regular job and simultaneously enrolled in an 11-month course at the IT online school ItStepAcademy. This school was financially accessible, and it offered a reputable diploma. Most importantly, I was able to review, catch up on missed material, and refine my web development skills, preparing myself to launch my career. The course covered HTML, CSS, JS, TS, React, and essential libraries such as Redux, Node.js, Express, and Git from scratch."
+
+
+"I am confident that I have chosen the right path and am eager to continue growing as a web developer. I am committed to constantly improving my skills, working on real-world projects, and contributing to the creation of high-quality and user-friendly web applications. I believe my experience and knowledge will help me succeed in this field and become a valuable asset to any team."
+
+
