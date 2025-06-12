@@ -5,6 +5,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 
 function App() {
   const email = useAppSelector(state => state.user.email)
+  
   const navigate = useNavigate()
 
 
@@ -13,7 +14,7 @@ function App() {
       navigate('/auth')
     }
   }, [email])
-
+  
   return (
     <>
 
