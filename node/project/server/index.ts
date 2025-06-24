@@ -5,6 +5,7 @@ import {pool} from './configs/db'
 import dotenv from 'dotenv';
 
 import userRouter from './routers/user.router'
+import { errorHandler } from './middleware/errorHandler';
 
 
 
@@ -26,6 +27,8 @@ app.get('/', async (req: Request, res: Response) => {
     }
 
 });
+
+app.use(errorHandler)
 
 app.listen(3000, () => {
     console.log(`⚡ Сервер запущено на http://localhost:3000`);
