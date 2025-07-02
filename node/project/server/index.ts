@@ -7,6 +7,8 @@ import dotenv from 'dotenv';
 
 import userRouter from './routers/user.router'
 import portfolioRouter from './routers/portfolio.router'
+import skillRouter from './routers/skill.router'
+import projectRouter from './routers/project.router'
 import { errorHandler } from './middleware/errorHandler';
 
 
@@ -20,6 +22,8 @@ app.use(express.json());
 
 app.use('/user', userRouter);
 app.use('/portfolio', portfolioRouter)
+app.use('/skill', skillRouter)
+app.use('/project', projectRouter)
 
 
 app.get('/', async (req: Request, res: Response) => {
