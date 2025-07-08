@@ -1,49 +1,44 @@
 import { useEffect, useState, type FunctionComponent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import cls from './Login.module.css';
+import cls from '../Login/Login.module.css';
 
 import api from '../../api/axios';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../state';
 
-interface LoginProps { }
+interface RegistrationProps { }
 
-const Login: FunctionComponent<LoginProps> = () => {
+const Registration: FunctionComponent<RegistrationProps> = () => {
   const [loginError, setloginError] = useState<boolean>(false);
   const navigate = useNavigate()
 
-   
+  const user = useSelector<RootState>(s => s.auth)
 
-  const token = useSelector<RootState>(s=>s.auth.accessToken)
-
-  useEffect(()=>{
-    if(token) {
+  useEffect(() => {
+    if (user) {
       navigate('../dashboard')
     }
-  },[token])
+  }, [])
 
   const formik = useFormik({
     initialValues: {
       email: '',
+      name: '',
       password: '',
     },
     validationSchema: Yup.object({
       email: Yup.string().email('Невірний email').required('Обов’язково'),
+      name: Yup.string().min(1).max(64).required('Обов’язково'),
       password: Yup.string().min(6, 'Мінімум 6 символів').max(64, 'Максимум 64 символи').required('Обов’язково'),
     }),
     onSubmit: (values) => {
-      api.post('/user/login', { ...values }, {
+      api.post('/user/register', { ...values }, {
           withCredentials: true
       }).then(res => {
         localStorage.setItem('accessToken', res.data.accessToken)
 
-
-      }).catch((err) => {
-        if (err.status === 401) {
-          setloginError(true)
-        }
 
       })
     },
@@ -54,7 +49,7 @@ const Login: FunctionComponent<LoginProps> = () => {
       <form onSubmit={formik.handleSubmit} className={cls.form}>
 
         <h2 className={cls.title}>Вхід до акаунту</h2>
-        {loginError && <div className={cls.error}>Невірний логін або пароль</div>}
+
         <div className={cls.field}>
           <label htmlFor="email" className={cls.label}>Email</label>
           <input
@@ -65,6 +60,19 @@ const Login: FunctionComponent<LoginProps> = () => {
           />
           {formik.touched.email && formik.errors.email && (
             <div className={cls.error}>{formik.errors.email}</div>
+          )}
+        </div>
+
+        <div className={cls.field}>
+          <label htmlFor="name" className={cls.label}>Name</label>
+          <input
+            id="name"
+            type="text"
+            {...formik.getFieldProps('name')}
+            className={cls.input}
+          />
+          {formik.touched.name && formik.errors.name && (
+            <div className={cls.error}>{formik.errors.name}</div>
           )}
         </div>
 
@@ -82,12 +90,12 @@ const Login: FunctionComponent<LoginProps> = () => {
         </div>
 
         <button type="submit" className={cls.button}>
-          Увійти
+          Registration
         </button>
-        <button className={cls.registration} type='button' onClick={() => { navigate('../registration') }}>Нема акаунту? реєстрація тут</button>
+        <button className={cls.registration} type='button' onClick={() => { navigate('../login') }}>I have allready an account</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Registration;

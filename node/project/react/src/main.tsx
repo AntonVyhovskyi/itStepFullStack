@@ -4,21 +4,41 @@ import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './components/Login/Login.tsx'
+import Main from './components/Main/Main.tsx'
+import Registration from './components/Registration/Registration.tsx'
+import { Provider } from 'react-redux'
+import {store} from './state'
+import Dashboard from './components/Dashboard/Dashboard.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     children: [
       {
+        path: '/',
+        element: <Main />
+      },
+      {
         path: 'login',
-        element: <Login/>
+        element: <Login />
+      },
+      {
+        path: 'registration',
+        element: <Registration />
+      },
+      {
+        path: 'dashboard',
+        element: <Dashboard/>
       }
     ]
   }
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
+
   ,
 )

@@ -73,3 +73,20 @@
 .button:hover {
   background-color: #1e40af;
 }
+
+.registration {
+  margin-top: 10px;
+  background-color: #1e40af00;
+  border: none;
+  cursor: pointer;
+  color: #1e40af
+}
+
+.registration:hover {
+  color: green;
+}
+
+.registration:active {
+  color: #2563eb;
+}
+

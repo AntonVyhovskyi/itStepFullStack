@@ -1,7 +1,8 @@
 import express, { Request, Response } from 'express';
-// import trukObject from  './types/express';
+import cors from 'cors'
+import cookieParser from 'cookie-parser';
 
-import {pool} from './configs/db'
+import { pool } from './configs/db'
 
 import dotenv from 'dotenv';
 
@@ -19,6 +20,11 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true,               
+}));
 
 app.use('/user', userRouter);
 app.use('/portfolio', portfolioRouter)
