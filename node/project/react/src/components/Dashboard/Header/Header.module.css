@@ -1,0 +1,27 @@
+.container {
+ padding: 10px;
+ display: flex;
+ justify-content: space-between;
+ background-color: rgb(172, 161, 228);
+ align-items: center;
+}
+
+.name {
+color: aliceblue;
+font-weight: 500;
+font-size: 20px;
+}
+
+button {
+background: none;
+border: white 2px solid;
+border-radius: 5px;
+padding: 5px;
+font-size: 18px;
+color: aliceblue;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -17,7 +17,8 @@ export interface IPortfolio {
     github: string,
     telegram: string,
     viber: string,
-    watsup: string
+    watsup: string,
+    image_url: string
 }
 
 export const createPortfolio = async (
@@ -36,18 +37,19 @@ export const createPortfolio = async (
         github,
         telegram,
         viber,
-        watsup
+        watsup,
+        image_url
     } = portfolio
 
     const result = await pool.query(
         `
     INSERT INTO portfolios (
-      user_id, first_name, last_name, middle_name, title, description, created_at, updated_at, email, phone, linkedin, github, telegram, viber, watsup 
+      user_id, first_name, last_name, middle_name, title, description, created_at, updated_at, email, phone, linkedin, github, telegram, viber, watsup, image_url
     ) VALUES (
-      $1, $2, $3, $4, $5, $6, NOW(), NOW(), $7, $8, $9, $10, $11, $12, $13
+      $1, $2, $3, $4, $5, $6, NOW(), NOW(), $7, $8, $9, $10, $11, $12, $13, $14
     ) RETURNING *
     `,
-        [user_id, first_name, last_name || null, middle_name || null, title, description, email || null, phone || null, linkedin || null, github || null, telegram || null, viber || null, watsup || null]
+        [user_id, first_name, last_name || null, middle_name || null, title, description, email || null, phone || null, linkedin || null, github || null, telegram || null, viber || null, watsup || null, image_url || null]
     )
 
     return result.rows[0] as IPortfolio
@@ -69,7 +71,8 @@ export const updatePortfolio = async (portfolio: Omit<IPortfolio, 'created_at' |
         github,
         telegram,
         viber,
-        watsup
+        watsup,
+        image_url
     } = portfolio
 
     const newPortfolio = await pool.query(
@@ -88,9 +91,10 @@ export const updatePortfolio = async (portfolio: Omit<IPortfolio, 'created_at' |
       github = $12,
       telegram = $13,
       viber = $14,
-      watsup = $15
+      watsup = $15,
+      image_url = $16
     WHERE id = $7 AND user_id = $8
-     RETURNING *`, [user_id, first_name, last_name || null, middle_name || null, title, description, id, user_id, email || null, phone || null, linkedin || null, github || null, telegram || null, viber || null, watsup || null])
+     RETURNING *`, [user_id, first_name, last_name || null, middle_name || null, title, description, id, user_id, email || null, phone || null, linkedin || null, github || null, telegram || null, viber || null, watsup || null, image_url || null])
 
     return newPortfolio.rows[0] || null
 }

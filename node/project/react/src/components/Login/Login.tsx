@@ -2,27 +2,23 @@ import { useEffect, useState, type FunctionComponent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import cls from './Login.module.css';
+import axios from 'axios';
 
-import api from '../../api/axios';
-import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../state';
+import { useNavigate } from 'react-router-dom';
+import { setToken } from '../../state/slices/authSlice';
 
-interface LoginProps { }
+interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
-  const [loginError, setloginError] = useState<boolean>(false);
+
+  const [errorLogin, seterrorLogin] = useState<boolean>(false);
+  const token: string | null = useSelector((s: RootState)=>s.auth.accessToken)
+
   const navigate = useNavigate()
 
-   
-
-  const token = useSelector<RootState>(s=>s.auth.accessToken)
-
-  useEffect(()=>{
-    if(token) {
-      navigate('../dashboard')
-    }
-  },[token])
+  const dispatch = useDispatch()
 
   const formik = useFormik({
     initialValues: {
@@ -30,31 +26,34 @@ const Login: FunctionComponent<LoginProps> = () => {
       password: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().email('Невірний email').required('Обов’язково'),
-      password: Yup.string().min(6, 'Мінімум 6 символів').max(64, 'Максимум 64 символи').required('Обов’язково'),
+      email: Yup.string().email().required(),
+      password: Yup.string().min(6, 'Мінімум 6 символів').max(64).required(),
     }),
     onSubmit: (values) => {
-      api.post('/user/login', { ...values }, {
-          withCredentials: true
-      }).then(res => {
-        localStorage.setItem('accessToken', res.data.accessToken)
-
-
-      }).catch((err) => {
+      axios.post('http://localhost:3000/user/login', {...values}, { withCredentials: true }).then(res=>{
+        localStorage.setItem('token', res.data.accessToken);
+        dispatch(setToken(res.data.accessToken))
+      }).catch(err=>{
         if (err.status === 401) {
-          setloginError(true)
+          seterrorLogin(true)
+        } else {
+          alert('something wrong')
         }
-
       })
     },
   });
 
+  useEffect(()=>{
+    if (token) {
+      navigate('../dashboard')
+    }
+  }, [token])
+
   return (
     <div className={cls.container}>
       <form onSubmit={formik.handleSubmit} className={cls.form}>
-
-        <h2 className={cls.title}>Вхід до акаунту</h2>
-        {loginError && <div className={cls.error}>Невірний логін або пароль</div>}
+        <h2 className={cls.title}>Login</h2>
+        {errorLogin && <div className={cls.error}>email or password is incorrect</div>}
         <div className={cls.field}>
           <label htmlFor="email" className={cls.label}>Email</label>
           <input
@@ -69,7 +68,7 @@ const Login: FunctionComponent<LoginProps> = () => {
         </div>
 
         <div className={cls.field}>
-          <label htmlFor="password" className={cls.label}>Пароль</label>
+          <label htmlFor="password" className={cls.label}>Password</label>
           <input
             id="password"
             type="password"
@@ -84,7 +83,7 @@ const Login: FunctionComponent<LoginProps> = () => {
         <button type="submit" className={cls.button}>
           Увійти
         </button>
-        <button className={cls.registration} type='button' onClick={() => { navigate('../registration') }}>Нема акаунту? реєстрація тут</button>
+        <button className={cls.registration} type='button' onClick={() => { navigate('../registration') }}>I havnt acc.. registration</button>
       </form>
     </div>
   );

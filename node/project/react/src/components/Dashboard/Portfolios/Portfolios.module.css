@@ -1,0 +1,105 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.item {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.last_name {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.image img:hover {
+  border-color: #0077ff;
+}
+
+.buttonUpdate,
+.buttonWeb {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttonUpdate {
+  background-color: #0077ff;
+  color: white;
+}
+
+.buttonWeb {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.buttonUpdate:hover {
+  background-color: #005bd1;
+  transform: translateY(-2px);
+}
+
+.buttonWeb:hover {
+  background-color: #ccc;
+  transform: translateY(-2px);
+}
+
+.addPortfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  border: 2px dashed #bbb;
+  color: #888;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addPortfolio:hover {
+  background-color: #eaeaea;
+  transform: scale(1.03);
+  color: #333;
+  border-color: #999;
+}

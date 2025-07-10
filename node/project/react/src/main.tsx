@@ -9,6 +9,8 @@ import Registration from './components/Registration/Registration.tsx'
 import { Provider } from 'react-redux'
 import {store} from './state'
 import Dashboard from './components/Dashboard/Dashboard.tsx'
+import Portfolios from './components/Dashboard/Portfolios/Portfolios.tsx'
+import CreatePortfolio from './components/Dashboard/CreatePortfolio/CreatePortfolio.tsx'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <Dashboard/>
+        element: <Dashboard/>,
+        children: [
+          {
+            path: '',
+            element: <Portfolios/>
+          },
+          {
+            path: 'createNew',
+            element: <CreatePortfolio/>
+          }
+        ]
       }
     ]
   }
