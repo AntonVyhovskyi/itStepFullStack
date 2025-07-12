@@ -7,10 +7,12 @@ import Login from './components/Login/Login.tsx'
 import Main from './components/Main/Main.tsx'
 import Registration from './components/Registration/Registration.tsx'
 import { Provider } from 'react-redux'
-import {store} from './state'
+import store from './state'
 import Dashboard from './components/Dashboard/Dashboard.tsx'
 import Portfolios from './components/Dashboard/Portfolios/Portfolios.tsx'
 import CreatePortfolio from './components/Dashboard/CreatePortfolio/CreatePortfolio.tsx'
+import UpdatePortfolio from './components/Dashboard/UpdatePortfolio/UpdatePortfolio.tsx'
+import UpdateBasikInfo from './components/Dashboard/UpdatePortfolio/UpdateBasicInfo/UpdateBasikInfo.tsx'
 
 const router = createBrowserRouter([
   {
@@ -31,15 +33,33 @@ const router = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <Dashboard/>,
+        element: <Dashboard />,
         children: [
           {
             path: '',
-            element: <Portfolios/>
+            element: <Portfolios />
           },
           {
             path: 'createNew',
-            element: <CreatePortfolio/>
+            element: <CreatePortfolio />
+          },
+          {
+            path: 'update/:id',
+            element: <UpdatePortfolio />,
+            children: [
+              {
+                path: 'basicInfo',
+                element: <UpdateBasikInfo/>
+              },
+              {
+                path: 'skills',
+                element: <div>skills</div>
+              },
+              {
+                path: 'projects',
+                element: <div>projects</div>
+              }
+            ]
           }
         ]
       }

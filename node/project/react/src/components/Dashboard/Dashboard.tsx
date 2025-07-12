@@ -49,6 +49,8 @@ const Dashboard: FunctionComponent<DashboardProps> = () => {
     const fetchPortfolios = () => {
          api.get(`http://localhost:3000/portfolio/portfoliosByUserId/${userData.user?.id}`).then(res=>{
             setportfolios(res.data)
+            console.log(res.data);
+            
         })
     }
     useEffect(()=>{

@@ -92,13 +92,13 @@ export const refresh = async (req: Request, res: Response, next: NextFunction) =
     if (!refreshToken) {
       throw new ApiError(401, 'No refresh token provided');
     }
-    const payload = verifyRefreshToken(refreshToken) as JwtPayload & { id: number, email: string };
+    const payload = verifyRefreshToken(refreshToken) as JwtPayload & { id: number, email: string, name: string };
     const savedToken = await findToken(refreshToken);
     if (!savedToken) {
       throw new ApiError(401, 'Unauthorized: token not found');
     }
     await removeToken(refreshToken);
-    const newTokens = generateToken({ id: payload.id, email: payload.email });
+    const newTokens = generateToken({ id: payload.id, email: payload.email, name: payload.name });
     await saveToken(payload.id, newTokens.refreshToken);
     res
       .cookie('refreshToken', newTokens.refreshToken, cookieOptionsForRefreshToken)

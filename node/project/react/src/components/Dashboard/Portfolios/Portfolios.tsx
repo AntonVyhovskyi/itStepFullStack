@@ -28,7 +28,7 @@ const Portfolios: FunctionComponent<PortfoliosProps> = () => {
                         <div className={cls.name}>{el.first_name} {el.last_name}</div>
                         <div className={cls.last_name}>{el.title}</div>
                         <div className={cls.image}><img src={el.image_url ? el.image_url : noImage} alt="" /></div>
-                        <button className={cls.buttonUpdate}>Update</button>
+                        <button className={cls.buttonUpdate} onClick={()=>{navigate(`./update/${el.id}`)}}>Update</button>
                         <button className={cls.buttonWeb}>Web Page</button>
 
 
