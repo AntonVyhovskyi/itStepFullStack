@@ -50,7 +50,7 @@ const router = createBrowserRouter([
             element: <UpdatePortfolio />,
             children: [
               {
-                path: 'basicInfo',
+                path: '',
                 element: <ContaierComponentUpdateBasicInfo/>
               },
               {

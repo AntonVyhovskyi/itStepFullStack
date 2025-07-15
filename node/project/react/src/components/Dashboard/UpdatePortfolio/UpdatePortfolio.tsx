@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
 import cls from './UpdatePortfolio.module.css'
 import { useEffect, type FunctionComponent } from 'react';
 
@@ -10,14 +10,11 @@ interface UpdatePortfolioProps {
 
 const UpdatePortfolio: FunctionComponent<UpdatePortfolioProps> = () => {
 
-   const navigate = useNavigate()
 
-  
 
-    
-    useEffect(() => {
-        navigate('basicInfo')
-    }, []);
+  const {id} = useParams()
+
+
 
 
 
@@ -25,7 +22,8 @@ const UpdatePortfolio: FunctionComponent<UpdatePortfolioProps> = () => {
         <div>
             <nav className={cls.navigation}>
                 <NavLink
-                    to="basicInfo"
+                    to={`/dashboard/update/${id}`}
+                    end
                     className={({ isActive }) => ( isActive ? `${cls.link} ${cls.active}` : cls.link)}
                 >
                     Basic Info
