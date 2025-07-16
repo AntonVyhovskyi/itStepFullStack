@@ -15,12 +15,17 @@ import UpdatePortfolio from './components/Dashboard/UpdatePortfolio/UpdatePortfo
 import ContaierComponentUpdateBasicInfo from './components/Dashboard/UpdatePortfolio/UpdateBasicInfo/ContaierComponentUpdateBasicInfo.tsx'
 import ContainerUpdateSkills from './components/Dashboard/UpdatePortfolio/UpdateSkills/ContainerUpdateSkills.tsx'
 import ContainerUpdateProjects from './components/Dashboard/UpdatePortfolio/UpdateProjects/ContainerUpdateProjects.tsx'
+import PortfolioPage from './components/PortfolioPage/PortfolioPage.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
+      {
+        path: 'portfolioPage/:id',
+        element: <PortfolioPage />
+      },
       {
         path: '/',
         element: <Main />

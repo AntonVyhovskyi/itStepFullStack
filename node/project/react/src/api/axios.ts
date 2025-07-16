@@ -22,73 +22,7 @@ api.interceptors.request.use((cfg: InternalAxiosRequestConfig) => {
 });
 
 
-// let isRefreshing = false;
-// let subscribers: Array<(t: string) => void> = []
 
-// const onRefreshed = (token: string) => {
-//   subscribers.forEach(cb => cb(token));
-//   subscribers = [];
-// }
-
-// const addSubscriber = (cb: (t: string) => void) => subscribers.push(cb)
-
-
-// interface RetryAxiosConfig extends AxiosRequestConfig {
-//   _retry?: boolean
-// }
-
-
-// api.interceptors.response.use(
-//   (res: AxiosResponse) => res,
-//   async (err) => {
-//     const { response, config } = err;
-//     const originalRequest = config as RetryAxiosConfig;
-
-//     if (!response || response.status !== 401) {
-//       return Promise.reject(err)
-//     }
-
-//     if (originalRequest._retry) {
-//       return Promise.reject(err)
-//     }
-//     originalRequest._retry = true;
-
-//     if (!isRefreshing) {
-//       isRefreshing = true;
-//       try {
-//         const { data } = await api.post('/user/refreshToken');
-//         const newToken: string = data.accessToken
-
-//         localStorage.setItem('accessToken', newToken)
-//         store.dispatch(setToken(newToken))
-//         onRefreshed(newToken);
-//       } catch (error) {
-//         store.dispatch(logout());
-//         return Promise.reject(error)
-//       } finally {
-//         isRefreshing = false;
-//       }
-//     }
-
-//     return new Promise((resolve, reject) => {
-//       addSubscriber((token: string) => {
-//         if (!originalRequest.headers) {
-//           originalRequest.headers = {};
-//         }
-//         originalRequest.headers['Authorization'] = `Bearer ${token}`;
-
-//         api({
-//           ...originalRequest,
-//           headers: originalRequest.headers,
-//           data: originalRequest.data,
-//         })
-//           .then(resolve)
-//           .catch(reject);
-//       });
-//     });
-
-//   }
-// )
 
 
 api.interceptors.response.use((config) => {

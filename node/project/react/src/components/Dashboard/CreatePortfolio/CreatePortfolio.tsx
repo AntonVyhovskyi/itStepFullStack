@@ -4,9 +4,9 @@ import { useFormik } from 'formik';
 import { uploadToImgBB } from '../../../utils/uploadToImgBB';
 
 import * as Yup from 'yup';
-import { useSelector } from 'react-redux';
-import type { RootState } from '../../../state';
+
 import api from '../../../api/axios';
+import { useNavigate } from 'react-router-dom';
 
 const phoneRegExp = /^\+?[0-9]{10,15}$/;
 
@@ -39,6 +39,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
 
     const [preview, setPreview] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate()
 
 
     const formik = useFormik({
@@ -61,6 +62,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
         onSubmit: (values) => {
             api.post('/portfolio/createPortfolio', {...values}).then(res=>{
                 console.log('Успішно создане портфоліо');
+                navigate(`/dashboard/update/${res.data.id}/skills`)
                 
             }).catch(err=>{
 
