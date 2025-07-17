@@ -63,7 +63,7 @@ const Dashboard: FunctionComponent<DashboardProps> = () => {
     return ( 
         <div className={cls.container}>
             <Header userData={userData}/>
-            <Outlet context={{portfolios}}/>
+            <Outlet context={{portfolios, fetchPortfolios}}/>
         </div>
      );
 }

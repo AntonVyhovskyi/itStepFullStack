@@ -11,21 +11,21 @@ import { useNavigate } from 'react-router-dom';
 const phoneRegExp = /^\+?[0-9]{10,15}$/;
 
 const validationSchema = Yup.object({
-  first_name: Yup.string().required('First name is required'),
-  last_name: Yup.string().required('Last name is required'),
-  middle_name: Yup.string(),
-  title: Yup.string().required('Title is required'),
-  description: Yup.string().max(1000, 'Too long').required('Discription name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
-  phone: Yup.string()
-    .matches(phoneRegExp, 'Invalid phone number')
-    .required('Phone is required'),
-  linkedin: Yup.string().url('Invalid LinkedIn URL'),
-  github: Yup.string().url('Invalid GitHub URL'),
-  telegram: Yup.string().url('Invalid Telegram URL'),
-  viber: Yup.string().matches(phoneRegExp, 'Invalid Viber number'),
-  watsup: Yup.string().matches(phoneRegExp, 'Invalid WhatsApp number'),
-  image_url: Yup.string().url('Invalid image URL'),
+    first_name: Yup.string().required('First name is required'),
+    last_name: Yup.string().required('Last name is required'),
+    middle_name: Yup.string(),
+    title: Yup.string().required('Title is required'),
+    description: Yup.string().max(1000, 'Too long').required('Discription name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    phone: Yup.string()
+        .matches(phoneRegExp, 'Invalid phone number')
+        .required('Phone is required'),
+    linkedin: Yup.string().url('Invalid LinkedIn URL'),
+    github: Yup.string().url('Invalid GitHub URL'),
+    telegram: Yup.string().url('Invalid Telegram URL'),
+    viber: Yup.string().matches(phoneRegExp, 'Invalid Viber number'),
+    watsup: Yup.string().matches(phoneRegExp, 'Invalid WhatsApp number'),
+    image_url: Yup.string().url('Invalid image URL'),
 });
 
 
@@ -35,7 +35,7 @@ interface CreatePortfolioProps {
 
 const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
 
-   
+
 
     const [preview, setPreview] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
@@ -60,14 +60,14 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
         },
         validationSchema,
         onSubmit: (values) => {
-            api.post('/portfolio/createPortfolio', {...values}).then(res=>{
-                console.log('Успішно создане портфоліо');
+            api.post('/portfolio/createPortfolio', { ...values }).then(res => {
+                alert('The portfolio has been successfully created. You can continue editing) Good luck in your job search!')
                 navigate(`/dashboard/update/${res.data.id}/skills`)
-                
-            }).catch(err=>{
+
+            }).catch(err => {
 
             })
-         }
+        }
 
     })
 
@@ -89,7 +89,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
                     type={type}
                     {...formik.getFieldProps(field)}
                     className={cls.input}
-                    readOnly = {readOnly? true : false}
+                    readOnly={readOnly ? true : false}
                 />
                 {renderError(field)}
             </div>
@@ -129,7 +129,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
                 {renderField('telegram', 'Telegram (url)', 'text')}
                 {renderField('viber', 'Viber (phone +12...)', 'text')}
                 {renderField('watsup', 'WhatsApp (phone +12...)', 'text')}
-               
+
                 <div className={cls.field}>
                     <label className={cls.label}>Photo</label>
 

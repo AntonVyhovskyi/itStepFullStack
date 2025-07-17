@@ -27,7 +27,7 @@ const Contacts: FunctionComponent<ContactsProps> = ({ basicInfo }) => {
                     <li key={label} className={cls.item}>
                         
                         <a href={href} className={cls.link} target="_blank" rel="noopener noreferrer">
-                            {label}
+                            {label === 'Email' || label === 'Phone' ? value : label}
                         </a>
                     </li>
                 ))}

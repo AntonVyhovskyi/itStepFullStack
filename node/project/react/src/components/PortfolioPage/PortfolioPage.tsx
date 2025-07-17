@@ -47,11 +47,11 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
             {basicInfo && 
             <BasicInfo basicInfo={basicInfo}/>
             }
-            {skills && 
-            <Skills skills={skills}/>
+            {(skills?.length && (skills?.length > 0)) ?
+            <Skills skills={skills}/> : ''
             }
-            {projects && 
-            <Projects projects={projects}/>
+            {(projects?.length && (projects?.length > 0)) ? 
+            <Projects projects={projects}/> : ''
             }
             {basicInfo && 
             <Contacts basicInfo={basicInfo} />

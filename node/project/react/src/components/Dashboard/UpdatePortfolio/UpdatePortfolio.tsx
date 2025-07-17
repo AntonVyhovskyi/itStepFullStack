@@ -12,7 +12,7 @@ const UpdatePortfolio: FunctionComponent<UpdatePortfolioProps> = () => {
 
 
 
-  const {id} = useParams()
+    const { id } = useParams()
 
 
 
@@ -24,19 +24,19 @@ const UpdatePortfolio: FunctionComponent<UpdatePortfolioProps> = () => {
                 <NavLink
                     to={`/dashboard/update/${id}`}
                     end
-                    className={({ isActive }) => ( isActive ? `${cls.link} ${cls.active}` : cls.link)}
+                    className={({ isActive }) => (isActive ? `${cls.link} ${cls.active}` : cls.link)}
                 >
                     Basic Info
                 </NavLink>
                 <NavLink
                     to="skills"
-                    className={({ isActive }) => ( isActive ? `${cls.link} ${cls.active}` : cls.link)}
+                    className={({ isActive }) => (isActive ? `${cls.link} ${cls.active}` : cls.link)}
                 >
                     Skills
                 </NavLink>
                 <NavLink
                     to="projects"
-                    className={({ isActive }) => ( isActive ? `${cls.link} ${cls.active}` : cls.link)}
+                    className={({ isActive }) => (isActive ? `${cls.link} ${cls.active}` : cls.link)}
                 >
                     Projects
                 </NavLink>
@@ -47,8 +47,15 @@ const UpdatePortfolio: FunctionComponent<UpdatePortfolioProps> = () => {
                 >
                     To dashboard
                 </NavLink>
-                
-                
+                <a
+                    href={`/portfolioPage/${id}`}
+                    className={cls.buttonDashboard}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Web Page
+                </a>
+
             </nav>
             <Outlet />
         </div>
