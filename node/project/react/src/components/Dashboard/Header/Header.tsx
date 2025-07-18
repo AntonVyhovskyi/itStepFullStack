@@ -20,7 +20,7 @@ const Header: FunctionComponent<HeaderProps> = (props) => {
     const logoutHandler = () => {
         api.post('user/logout', null, {
             withCredentials: true
-        }).then(res=>{
+        }).then(()=>{
             dispatch(logout())
         }).catch(err=>{
             console.log(err);

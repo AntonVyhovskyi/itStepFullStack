@@ -65,6 +65,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
                 navigate(`/dashboard/update/${res.data.id}/skills`)
 
             }).catch(err => {
+                console.log(err);
 
             })
         }

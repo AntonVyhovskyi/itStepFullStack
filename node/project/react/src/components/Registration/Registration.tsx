@@ -55,6 +55,8 @@ const Registration: FunctionComponent<RegistrationProps> = () => {
           setemailError(true)
         }
         else{
+          console.log(err);
+          
           alert('something wrong')
         }
       })

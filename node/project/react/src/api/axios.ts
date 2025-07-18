@@ -1,11 +1,12 @@
 import axios from 'axios';
-import type { AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import type {  InternalAxiosRequestConfig } from 'axios';
 import store from '../state';
 import { setToken, logout } from '../state/slices/authSlice';
-import { data } from 'react-router-dom';
+
+const BACK_PORT = import.meta.env.BACK_PORT || 5000;
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: `http://localhost:${BACK_PORT}`,
   withCredentials: true,
 });
 

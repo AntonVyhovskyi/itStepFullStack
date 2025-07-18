@@ -1,7 +1,6 @@
 import { useEffect, useState, type FunctionComponent } from "react";
 import cls from './PortfolioPage.module.css'
 import type { IBasicInfo } from "../Dashboard/UpdatePortfolio/UpdateBasicInfo/ContaierComponentUpdateBasicInfo";
-import axios from "axios";
 import api from "../../api/axios";
 import { useParams } from "react-router-dom";
 import BasicInfo from "./BasicInfo/BasicInfo";

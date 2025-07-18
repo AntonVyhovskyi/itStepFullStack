@@ -1,5 +1,5 @@
 import { useEffect, useState, type FunctionComponent } from "react";
-import { redirect, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import api from "../../../../api/axios";
 import UpdateProjects from "./UpdateProjects";
 
@@ -44,9 +44,11 @@ const ContainerUpdateProjects: FunctionComponent<ContainerUpdateProjectsProps> =
 
     const addNewProject = (values: INewProject) => {
         debugger
-        api.post(`project/${id}`, values).then(res=>{
+        api.post(`project/${id}`, values).then(()=>{
             fetchProjects()
         }).catch(err=>{
+            console.log(err);
+            
             alert('project creating is falled')
         })
     }

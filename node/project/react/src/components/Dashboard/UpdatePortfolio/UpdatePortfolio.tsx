@@ -1,6 +1,6 @@
-import { NavLink, Outlet, useNavigate, useParams } from 'react-router-dom';
+import { NavLink, Outlet, useParams } from 'react-router-dom';
 import cls from './UpdatePortfolio.module.css'
-import { useEffect, type FunctionComponent } from 'react';
+import { type FunctionComponent } from 'react';
 
 interface UpdatePortfolioProps {
 

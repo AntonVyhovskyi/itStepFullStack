@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+
 import cls from './App.module.css'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import type { RootState } from './state'
+import { Outlet } from 'react-router-dom'
+
 
 function App() {
 

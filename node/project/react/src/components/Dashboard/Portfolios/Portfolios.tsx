@@ -21,7 +21,7 @@ const Portfolios: FunctionComponent<PortfoliosProps> = () => {
     const { portfolios, fetchPortfolios } = useOutletContext<IContext>()
 
     const deletePortfolioFetch = (v: number) => {
-        api.delete(`/portfolio/${v}`).then(res => {
+        api.delete(`/portfolio/${v}`).then(() => {
             fetchPortfolios()
             setdeletePortfolio(0)
         })

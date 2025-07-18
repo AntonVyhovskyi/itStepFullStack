@@ -30,15 +30,17 @@ const ContainerUpdateSkills: FunctionComponent<ContainerUpdateSkillsProps> = () 
 
 
     const addSkill = (skillName: string) => {
-        api.post(`skill/addSkill/${id}`, {skillName}).then(res=>{
+        api.post(`skill/addSkill/${id}`, {skillName}).then(()=>{
             fetchSkills()
         })
     }
 
     const deleteSkill = (skill_id: number) => {
-        api.delete(`/skill/deleteFromPortfolio/${id}`, {data: {skill_id}}).then(res=>{
+        api.delete(`/skill/deleteFromPortfolio/${id}`, {data: {skill_id}}).then(()=>{
             fetchSkills()
         }).catch((e)=>{
+            console.log(e);
+            
             alert('No success delete')
         })
     }

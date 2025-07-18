@@ -2,12 +2,12 @@ import { useEffect, useState, type FunctionComponent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import cls from './Login.module.css';
-import axios from 'axios';
 
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../state';
 import { useNavigate } from 'react-router-dom';
 import { setToken } from '../../state/slices/authSlice';
+import api from '../../api/axios';
 
 interface LoginProps {}
 
@@ -30,13 +30,14 @@ const Login: FunctionComponent<LoginProps> = () => {
       password: Yup.string().min(6, 'Мінімум 6 символів').max(64).required(),
     }),
     onSubmit: (values) => {
-      axios.post('http://localhost:3000/user/login', {...values}, { withCredentials: true }).then(res=>{
+      api.post('/user/login', {...values}, { withCredentials: true }).then(res=>{
         localStorage.setItem('token', res.data.accessToken);
         dispatch(setToken(res.data.accessToken))
       }).catch(err=>{
         if (err.status === 401) {
           seterrorLogin(true)
         } else {
+          console.log(err);
           alert('something wrong')
         }
       })
