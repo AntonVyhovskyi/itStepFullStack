@@ -117,6 +117,7 @@ const CreatePortfolio: FunctionComponent<CreatePortfolioProps> = () => {
 
     return (
         <div className={cls.container}>
+            <button className={cls.backButton} onClick={()=>{navigate('../')}}>back</button>
             <form onSubmit={formik.handleSubmit} className={cls.form}>
                 {renderField('first_name', 'First name*', 'text')}
                 {renderField('last_name', 'Last name*', 'text')}
