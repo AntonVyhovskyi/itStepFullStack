@@ -3,20 +3,23 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+
+
+
+}
+
+.container h3 {
+  text-align: center;
+}
+
+.scills {
+  display: grid;
+  display: flex; gap: 10px;
   justify-content: center;
+
 }
 .item {
-  background-color: #f0f9ff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 9999px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #0369a1;
-  transition: background 0.3s ease;
-}
-.item:hover {
-  background-color: #e0f2fe;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(26, 26, 132);
 }

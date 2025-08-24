@@ -1,15 +1,16 @@
 .container {
-  background-color: #ffffff;
+  background-color: #005aea;
   padding: 2rem;
-  border-radius: 12px;
+ 
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 .blockTitle {
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #111827;
+  color: #ffffff;
   text-align: center;
+  margin-top: 0px;
 }
 .item {
   display: flex;
@@ -23,16 +24,16 @@
 .itemTitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
 }
 .itemDescription {
   margin: 0.5rem 0;
-  color: #4b5563;
+  color: #ffffff;
 }
 .gitLink,
 .liveLink {
   margin-right: 1rem;
-  color: #2563eb;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
 }

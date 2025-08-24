@@ -9,7 +9,7 @@ import type { FunctionComponent } from "react";
 interface HeaderProps {
     userData: AuthState | null
 }
- 
+
 const Header: FunctionComponent<HeaderProps> = (props) => {
     let name = null
     if (props.userData !== null) {
@@ -20,24 +20,26 @@ const Header: FunctionComponent<HeaderProps> = (props) => {
     const logoutHandler = () => {
         api.post('user/logout', null, {
             withCredentials: true
-        }).then(()=>{
+        }).then(() => {
             dispatch(logout())
-        }).catch(err=>{
+        }).catch(err => {
             console.log(err);
             dispatch(logout())
-            
+
         })
     }
 
-    return ( 
+    return (
         <div className={cls.container}>
-            <div className={cls.name}>
-                {name && name}
-            </div>
-            <button onClick={logoutHandler}>Вийти</button>
+            <div className={cls.title}>Portfo<span>Craft</span></div>
+            <div className={cls.right}>
+                <div className={cls.name}>
+                    {name && name}
+                </div>
+                <button onClick={logoutHandler}>Вийти</button></div>
 
         </div>
-     );
+    );
 }
- 
+
 export default Header;

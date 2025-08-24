@@ -1,6 +1,7 @@
 import { useState, type FunctionComponent } from "react";
 import type { ISkill } from "./ContainerUpdateSkills";
 import cls from './UpdateSkills.module.css'
+import {  FiTrash2 } from "react-icons/fi";
 
 interface UpdateSkillsProps {
     skills: ISkill[],
@@ -25,7 +26,7 @@ const UpdateSkills: FunctionComponent<UpdateSkillsProps> = ({ skills, addSkill, 
 
             {skills.map(el => <div key={el.id}>
                 {el.name}
-                <button className={cls.buttonDelete} onClick={()=>{deleteSkill(el.id)}}>X</button>
+                <button className={cls.buttonDelete} onClick={()=>{deleteSkill(el.id)}}><FiTrash2 color="black"/></button>
             </div>)}
         </div>
     );

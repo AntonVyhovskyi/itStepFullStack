@@ -5,19 +5,23 @@ import type { ISkill } from '../../Dashboard/UpdatePortfolio/UpdateSkills/Contai
 interface SkillsProps {
     skills: ISkill[]
 }
- 
-const Skills: FunctionComponent<SkillsProps> = ({skills}) => {
-    return ( 
+
+const Skills: FunctionComponent<SkillsProps> = ({ skills }) => {
+    return (
         <div className={cls.container}>
-            {skills.map(el=>{
-                return (
-                    <div key={el.id} className={cls.item}>
-                        {el.name}
-                    </div>
-                )
-            })}
+            <h3>What i can?</h3>
+            <div className={cls.scills}>
+                {skills.map(el => {
+                    return (
+                        <div key={el.id} className={cls.item}>
+                            {el.name}
+                        </div>
+                    )
+                })}
+            </div>
+
         </div>
-     );
+    );
 }
- 
+
 export default Skills;

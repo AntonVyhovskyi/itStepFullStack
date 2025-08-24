@@ -7,9 +7,10 @@ function Main() {
   return (
     <div className={cls.container}>
       <div className={cls.content}>
-        <h1 className={cls.title}>Створи власне портфоліо</h1>
+        <h1 className={cls.title}>Create your own portfolio</h1>
+        <h1 className={cls.titleBlack}>portfolio</h1>
         <p className={cls.subtitle}>
-          Простий спосіб представити себе, свої навички та проєкти. Ідеально для розробників, дизайнерів і фрилансерів.
+          A simple way to introduce yourself, your skills, and your projects. Perfect for developers, designers, and freelancers.
         </p>
         <button className={cls.button} onClick={() => navigate('login')}>
           Get started

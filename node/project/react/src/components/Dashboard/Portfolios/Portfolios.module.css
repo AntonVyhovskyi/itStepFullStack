@@ -1,3 +1,10 @@
+
+
+.pageTitle {
+  text-align: center;
+  font-size: 30px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -51,25 +58,20 @@
 
 .buttonUpdate,
 .buttonWeb {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 0.6rem 1rem;
   margin-top: 0.5rem;
-  border: none;
+  border: solid 1px rgb(145, 145, 145);
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  color: black;
 }
 
-.buttonUpdate {
-  background-color: #0077ff;
-  color: white;
-}
 
-.buttonWeb {
-  background-color: #e0e0e0;
-  color: #333;
-}
 
 .buttonUpdate:hover {
   background-color: #005bd1;

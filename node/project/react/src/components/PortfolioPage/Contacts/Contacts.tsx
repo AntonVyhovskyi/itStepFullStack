@@ -21,7 +21,7 @@ const Contacts: FunctionComponent<ContactsProps> = ({ basicInfo }) => {
 
     return (
         <div className={cls.container}>
-            <h2 className={cls.title}>Contacts</h2>
+            <h2 className={cls.title}>Contact me.</h2>
             <ul className={cls.list}>
                 {contacts.filter(c => c.value).map(({ label, value, href }) => (
                     <li key={label} className={cls.item}>

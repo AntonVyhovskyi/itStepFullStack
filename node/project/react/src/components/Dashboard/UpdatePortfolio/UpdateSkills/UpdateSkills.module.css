@@ -24,23 +24,24 @@
 }
 
 .addNew input[type="text"]:focus {
-  border-color: #007bff;
+  border-color: #5a86c2;
   outline: none;
 }
 
 .buttonAdd {
-  background-color: #007bff;
+  background-color: #000000;
   border: none;
   color: white;
   font-weight: 600;
   padding: 8px 15px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.5s ease;
 }
 
 .buttonAdd:hover {
-  background-color: #0056b3;
+  background-color: #a4beda;
+  transform: scale(1);
 }
 
 .container > div:nth-child(n+2) {
@@ -56,9 +57,9 @@
 }
 
 .buttonDelete {
-  background-color: #dc3545;
+  
   border: none;
-  color: white;
+ 
   font-weight: 600;
   padding: 4px 10px;
   border-radius: 50%;
@@ -66,8 +67,4 @@
   transition: background-color 0.2s ease;
   line-height: 1;
   font-size: 14px;
-}
-
-.buttonDelete:hover {
-  background-color: #a71d2a;
 }
